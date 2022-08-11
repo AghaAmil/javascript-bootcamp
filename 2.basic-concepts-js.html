@@ -4,111 +4,119 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
 
     <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
       h1 {
-        font-family: "Sofia", sans-serif;
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
         font-size: 3.5em;
         text-align: center;
         color: dodgerblue;
       }
 
       h2 {
-        font-family: "Sofia", sans-serif;
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
         font-size: 2em;
       }
     </style>
 
     <title>Learning JS by Sololearn</title>
   </head>
+
   <body>
     <h1>Learning JS by Sololearn</h1>
     <hr />
     <hr />
     <br />
 
-    <h2>1. Math Operations</h2>
+    <h2>Math Operations (Arithmetic Operations)</h2>
+    <h3>1. Addition</h3>
 
-    <p>Addition</p>
     <script>
-      var x = 12 + 38.3;
-      document.write("X = ");
+      var x = 10 + 2.1 + 32.4;
+      document.write("(x = 10 + 2.1 + 32.4) Therefore the varibale x is qual to: ");
       document.write(x);
     </script>
+    <br />
+    <br />
 
-    <p>Subtraction</p>
+    <h3>2. Multiplication</h3>
+    <p>Using multiplication operation in different way</p>
+
     <script>
-      var y = 45 - 123.63;
-      document.write("Y = ");
-      document.write(y);
+      var h1 = "5" * 10;
+      var h2 = "5" * "10";
+      var h3 = 5 * 10;
+
+      document.write(h1);
+      document.write("<br />");
+      document.write(h2);
+      document.write("<br />");
+      document.write(h3);
     </script>
+    <br />
+    <br />
 
-    <p>Multiplication</p>
+    <h3>3. Modulus</h3>
+
     <script>
-      var z = 4 * 5.98;
-      document.write("Z = ");
-      document.write(z);
+      document.write("The reminder of 12 % 4.3 is: ");
+      var modool = 12 % 4.3;
+      document.write(modool);
     </script>
+    <br />
+    <br />
 
-    <p>Division</p>
-    <script>
-      var w = 4 / 5.98;
-      var w2 = 4 / 0;
-      document.write("W = ");
-      document.write(w);
-      document.write(" ... Deviding things by zero will get a strange result = ");
-      document.write(w2);
-    </script>
-
-    <p>Modulus</p>
-    <script>
-      var s = 48 % 5;
-      document.write("S = ");
-      document.write(s);
-    </script>
-
-    <p>Increment type a</p>
-    <script>
-      var a = 0,
-        b = 10;
-      a = b++;
-
-      document.write(a);
-      document.write(" = a and b = ");
-      document.write(b);
-    </script>
-
-    <p>Increment type b</p>
+    <h3>4. Increment & Decrement</h3>
+    <p>Check below examples:</p>
+    <p>a = 0 & b = 10</p>
+    <br />
 
     <script>
-      var a1 = 0,
-        b1 = 10;
-      a1 = ++b1;
+      var a1 = 0;
+      var b1 = 10;
+      a1 = b1++;
 
+      var a2 = 0;
+      var b2 = 10;
+      a2 = ++b2;
+
+      var a3 = 0;
+      var b3 = 10;
+      a3 = b3--;
+
+      var a4 = 0;
+      var b4 = 10;
+      a4 = --b4;
+
+      document.write("The operation var++. Post Increment a = ");
       document.write(a1);
-      document.write(" = a and b = ");
+      document.write(" and b = ");
       document.write(b1);
-    </script>
 
-    <p>Decrement</p>
-    <script>
-      var f = 20;
-      f--;
-      document.write("F = ");
-      document.write(f);
-    </script>
+      document.write("<br />");
 
-    <p>Generate an expression using the eval() function</p>
+      document.write("The operation ++var. Pre Increment a = ");
+      document.write(a2);
+      document.write(" and b = ");
+      document.write(b2);
 
-    <script>
-      document.write(eval("10 * 4 + 5.6"));
-    </script>
+      document.write("<br />");
 
-    <p>Using Multiplication with a string for the firs time</p>
-    <script>
-      var strange = "Sololearn" * 5;
-      document.write(strange);
+      document.write("The operation var--. Post Decrement a = ");
+      document.write(a3);
+      document.write(" and b = ");
+      document.write(b3);
+
+      document.write("<br />");
+
+      document.write("The operation --var. Pre Decrement a = ");
+      document.write(a4);
+      document.write(" and b = ");
+      document.write(b4);
     </script>
 
     <br />
