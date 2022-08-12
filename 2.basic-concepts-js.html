@@ -118,6 +118,103 @@
       document.write(" and b = ");
       document.write(b4);
     </script>
+    <br />
+    <br />
+
+    <h3>Assignment Operators</h3>
+
+    <script>
+      var x1 = 10;
+      var y1 = 10;
+
+      x1 -= y1 += 9;
+
+      document.write(x1);
+      document.write("<br />");
+      document.write(y1);
+    </script>
+    <br />
+    <br />
+
+    <h3>Comparison Operators</h3>
+    <p>Check the console logs to validate the var (number) value.</p>
+
+    <script>
+      var number = 10;
+      console.log(number == 8);
+      console.log(number == 10);
+
+      document.write("<p>Below is the list of Comparison Operators:");
+      document.write("<p>Check browser's console log :");
+
+      console.log("== Operator:");
+      console.log(10 == 10.1);
+
+      var name = "water";
+      var name1 = "vater";
+      var x1 = 10;
+      console.log("=== Operator:");
+      console.log(name === name);
+      console.log(name === name1);
+      console.log(10 === name1);
+
+      console.log("!= Operator:");
+      console.log(12 != 1);
+      console.log(name != name1);
+      console.log(name != "water");
+
+      console.log("!== Operator:");
+      console.log(name !== name1);
+      console.log(10 !== name);
+      console.log(10 !== x1);
+
+      console.log("> Operator:");
+      console.log(10 > 5);
+      console.log(10 > x1);
+
+      console.log(">= Operator:");
+      console.log(6 >= 53);
+      console.log(10 >= x1);
+    </script>
+    <br />
+    <br />
+
+    <h3>Logical Operators</h3>
+    <p>Check the console log for more information on Logical Oprators</p>
+
+    <script>
+      console.log("&& operator");
+      console.log(3 > 1 && 4 <= 12);
+      console.log(3 === 4 && 4 < 13);
+
+      console.log("|| operator");
+      console.log(3 > 1 || 4 <= 12);
+      console.log(3 === 4 || 4 < 13);
+      console.log(3 >= 12 || 4 < 4);
+
+      console.log("! operator");
+      console.log(!(3 > 1));
+      console.log();
+
+      console.log("Conditional Ternay Operator");
+      var age = 20;
+      var isAdult = age < 18 ? "Jooje" : "Kir Khar";
+      console.log(isAdult);
+    </script>
+    <br />
+    <br />
+
+    <h3>String Operators</h3>
+
+    <script>
+      var string1 = "I'm learning JavaScript ";
+      var string2 = "with Sololearn.";
+
+      document.write(string1 + string2);
+      document.write("<br />");
+    </script>
+    <br />
+    <br />
 
     <br />
   </body>
