@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
+      h1 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: dodgerblue;
+      }
+
+      h2 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 2em;
+      }
+    </style>
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <hr />
+    <hr />
+    <br />
+
+    <h2>The if Statement</h2>
+
+    <script>
+      var x1 = 10;
+      var x2 = 70;
+
+      if (x1 > x2) {
+        document.write("JavaScript is sexy!");
+      } else {
+        document.write("JavaScript is very sexy!");
+      }
+
+      var string = x1 > x2 ? "JavaScript is creepy!" : "JavaScript is sexy!";
+      console.log(string);
+    </script>
+    <br /><br />
+
+    <h2>The else if Statement</h2>
+
+    <script>
+      var num = 1;
+
+      if (num == 1) {
+        document.write("HTML Tutorials");
+      } else if (num == 2) {
+        document.write("CSS Tutorials");
+      } else {
+        document.write("JavaScript Tutorials");
+      }
+    </script>
+    <br /><br />
+
+    <h2>The Switch Case Statement</h2>
+
+    <script>
+      var day = 5;
+      switch (day) {
+        case 2:
+          document.write("Monday");
+          break;
+        case 3:
+          document.write("Tuesday");
+          break;
+        case 4:
+          document.write("Wednesday");
+          break;
+        case 5:
+          document.write("Thursday");
+          break;
+        default:
+          document.write("Another Day");
+      }
+
+      document.write('<p>Another example of switch case statement:</p>');
+
+      var color = "blue";
+      switch (color) {
+        case "blue":
+          document.write("The color is blue.");
+          break;
+        case "red":
+          document.write("The color is red.");
+          break;
+        case "green":
+          document.write("The color is green.");
+          break;
+        case "black":
+          document.write("The color is black.");
+          break;
+        default:
+          document.write("Color is not determined.");
+      }
+    </script>
+
+    <br />
+  </body>
+</html>
