@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
+      h1 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: dodgerblue;
+      }
+
+      h2 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 2em;
+      }
+    </style>
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <hr />
+    <hr />
+    <br />
+
+    <h2>The For Loop</h2>
+    <p>Behold, the first for loop in JavaScript after all the shitty loop in C & C++</p>
+
+    <script>
+      for (i = 1; i <= 10; i++) {
+        document.write(i + " ");
+      }
+
+      document.write("<br />");
+      document.write("<br />");
+
+      for (j = 1, text = ""; j <= 10; j++) {
+        text = j;
+        document.write(text + " ");
+        document.write(j + "<br />");
+      }
+    </script>
+    <br /><br />
+
+    <h2>The While Loop</h2>
+    <p>Doing a while loop:</p>
+
+    <script>
+      var i = 0;
+      while (i < 11) {
+        document.write(i + "<br />");
+        i++;
+      }
+    </script>
+    <br /><br />
+
+    <h2>The Do...While Loop</h2>
+    <p>Here is the real example:</p>
+
+    <script>
+      var x = 20;
+      do {
+        document.write(x + "<br />");
+        x++;
+      } while (x <= 25);
+    </script>
+    <br /><br />
+
+    <h2>Break</h2>
+    <p>Using break to jump out of a loop:</p>
+
+    <script>
+      for (i = 0; i <= 10; i++) {
+        if (i == 10) {
+          break;
+        }
+        document.write(i + "<br />");
+      }
+
+      document.write("<br />");
+      document.write("<br />");
+
+      for (x = 0; x <= 10; x++) {
+        if (x == 5) {
+          continue;
+        }
+        if (x == 10) {
+          break;
+        }
+        document.write(x + "<br />");
+      }
+
+      document.write("<br />");
+      document.write("<br />");
+
+      var sum = 0;
+      for (j = 4; j < 8; j++) {
+        if (j == 6) {
+          continue;
+        }
+        document.write(j + " ");
+        sum += j;
+      }
+      document.write(sum);
+
+      document.write("<br />");
+      document.write("<br />");
+
+      var z = 0;
+      while (z < 6) {
+        z++;
+      }
+      document.write(z);
+    </script>
+
+    <br />
+  </body>
+</html>
