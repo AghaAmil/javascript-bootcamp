@@ -121,6 +121,61 @@
       }
       document.write(z);
     </script>
+    <br /><br />
+
+    <h2>The Snail in the Well project</h2>
+    <p>
+      The snail climbs up 7 feet each day and slips back 2 feet each night. How many days will it take the
+      snail to get out of a well with the given depth?
+    </p>
+    <br />
+    <p><strong>Sample Input:</strong></p>
+    <p>31</p>
+    <p><strong>Sample Output:</strong></p>
+    <p>6</p>
+    <br />
+
+    <p>Two Sample input is feeded. 31 & 134.</p>
+
+    <script>
+      var depth = 31;
+      var day = 1;
+
+      var totalDistance = 0;
+
+      while (totalDistance < depth) {
+        totalDistance += 7;
+        if (totalDistance >= depth) {
+          break;
+        }
+        totalDistance -= 2;
+        day++;
+      }
+
+      document.write("The time that takes the snail to come out of the depth (first sample) is: " + day);
+      // console.log("The time that takes the snail to come out of the depth is: " + day)
+    </script>
+
+    <br />
+
+    <script>
+      var depth = 134;
+      var day = 1;
+
+      var totalDistance = 0;
+
+      while (totalDistance < depth) {
+        totalDistance += 7;
+        if (totalDistance >= depth) {
+          break;
+        }
+        totalDistance -= 2;
+        day++;
+      }
+
+      document.write("The time that takes the snail to come out of the depth (second sample) is: " + day);
+      // console.log("The time that takes the snail to come out of the depth is: " + day)
+    </script>
 
     <br />
   </body>
