@@ -111,6 +111,28 @@
     </script>
     <br />
 
+    <h2>Alert, Prompt, Confirm</h2>
+
+    <script>
+      alert("In the up comming window\njust enter your name");
+
+      var user = prompt("Please enter your name:");
+      if (user == null) {
+        user = "You did not write your name";
+      }
+      document.write("your name is: " + user);
+      document.write("<br />");
+      document.write("<br />");
+
+      var result = confirm("Did you enjoy practicing JavaScript?");
+      if (result == true) {
+        document.write(user + ", you love JavaScript. Joooonn!");
+      } else {
+        document.write(user + ", JavaScript is kinda meehhh!");
+      }
+    </script>
+    <br />
+
     <br />
   </body>
 </html>
