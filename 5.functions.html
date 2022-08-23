@@ -87,6 +87,30 @@
     </script>
     <br />
 
+    <h2>Function Return</h2>
+    <p>The value of variable num is displayed by function return property.</p>
+
+    <script>
+      function multi(x, y) {
+        return x * y;
+      }
+
+      var num = multi(5, 7);
+      document.write("The value of variable num is: " + num);
+
+      document.write("<br />");
+      document.write("<br />");
+      document.write("<p>Another example is here: </p>");
+
+      function sum(a, b, c) {
+        var total = (a + b) * c - (22.1 % 3);
+        return total;
+      }
+
+      document.write("The calculator, calculated the sum as: " + sum(12, 7.32, 3.4));
+    </script>
+    <br />
+
     <br />
   </body>
 </html>
