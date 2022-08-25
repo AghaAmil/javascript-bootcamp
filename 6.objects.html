@@ -45,11 +45,10 @@
       };
 
       var x = person.name;
-      var y = person["age"];
 
-      document.write(x);
+      document.write(x); // using a new variable to display the person.name
       document.write("<br />");
-      document.write(y);
+      document.write(person["age"]); // print the person.age directly inside the document.write
 
       document.write("<br />");
       document.write("<br />");
@@ -88,6 +87,76 @@
     <br />
     <br />
 
+    <h2>Methods</h2>
+    <p>An example is mentioned below:</p>
+
+    <script>
+      function person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.changeName = function (name) {
+          this.name = name;
+        };
+      }
+
+      var p = new person("David", 21);
+      document.write(p.name + " " + p.age);
+      document.write("<br />");
+
+      p.changeName("John");
+      document.write(p.name + " " + p.age);
+      // Now p.name equals to "John"
+    </script>
+
+    <p>A new complex example (self-created example just now):</p>
+    <br />
+
+    <script>
+      function user(fname, sname, height, weight) {
+        this.fname = fname;
+        this.sname = sname;
+        this.height = height;
+        this.weight = weight;
+        this.heightConverter = function (height) {
+          this.height = height;
+        };
+        this.weightConverter = function (weight) {
+          this.weight = weight;
+        };
+      }
+
+      var user1 = new user("Amirhossein", "Moravveji", 169, 123);
+      document.write(
+        "Registered user is: " +
+          user1.fname +
+          " " +
+          user1.sname +
+          ". Height = " +
+          user1.height +
+          " cm & Weight = " +
+          user1.weight +
+          " kg."
+      );
+
+      document.write("<br />");
+      document.write("<br />");
+      document.write("<p>The user's information in US database.</p>");
+      document.write("<br />");
+      user1.heightConverter(169 / 30.48);
+      user1.weightConverter(123 * 2.205);
+
+      document.write(
+        "Registered user is: " +
+          user1.fname +
+          " " +
+          user1.sname +
+          ". Height = " +
+          user1.height.toFixed(2) +
+          " feet & Weight = " +
+          user1.weight.toFixed(1) +
+          " lb."
+      );
+    </script>
 
     <br />
   </body>
