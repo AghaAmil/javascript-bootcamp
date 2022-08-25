@@ -111,6 +111,20 @@
     </script>
     <br />
 
+    <p>A test example is mentioned here:</p>
+    <br />
+
+    <script>
+      function test(number) {
+        while (number < 5) {
+          number++;
+        }
+        return number;
+      }
+
+      document.write("The value of the test number is: " + test(2));
+    </script>
+
     <h2>Alert, Prompt, Confirm</h2>
 
     <script>
@@ -118,14 +132,20 @@
 
       var user = prompt("Please enter your name:");
       if (user == null) {
-        user = "You did not write your name";
+        document.write("You did not enter your name when its been asked.");
+      } else {
+        document.write("your name is: " + user);
       }
-      document.write("your name is: " + user);
+
       document.write("<br />");
       document.write("<br />");
 
       var result = confirm("Did you enjoy practicing JavaScript?");
-      if (result == true) {
+      if (user == null) {
+        document.write(
+          "You are not able to see this section as you have not entered your name. Referesh the page to try again."
+        );
+      } else if (result == true && user != null) {
         document.write(user + ", you love JavaScript. Joooonn!");
       } else {
         document.write(user + ", JavaScript is kinda meehhh!");
