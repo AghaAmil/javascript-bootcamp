@@ -230,6 +230,31 @@
           " kg"
       );
     </script>
+    <br />
+    <br />
+
+    <h2>Testing something here:</h2>
+
+    <script>
+      function person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.changeName = newName;
+      }
+
+      function newName(name) {
+        this.name = name;
+      }
+
+      var p = new person("David", 21);
+      document.write(p.name + " " + p.age);
+      document.write("<br />");
+
+      p.changeName("Amirhossein");
+      // Now p.name equals to "John"
+
+      document.write(p.name + " " + p.age);
+    </script>
 
     <br />
   </body>
