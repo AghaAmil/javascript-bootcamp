@@ -44,6 +44,8 @@
         weight: 123,
       };
 
+      console.log(person);
+
       var x = person.name;
 
       document.write(x); // using a new variable to display the person.name
@@ -118,10 +120,10 @@
         this.height = height;
         this.weight = weight;
         this.heightConverter = function (height) {
-          this.height = height;
+          this.height = height /= 30.48;
         };
         this.weightConverter = function (weight) {
-          this.weight = weight;
+          this.weight = weight *= 2.205;
         };
       }
 
@@ -142,8 +144,8 @@
       document.write("<br />");
       document.write("<p>The user's information in US database.</p>");
       document.write("<br />");
-      user1.heightConverter(169 / 30.48);
-      user1.weightConverter(123 * 2.205);
+      user1.heightConverter(user1.height);
+      user1.weightConverter(user1.weight);
 
       document.write(
         "Registered user is: " +
@@ -155,6 +157,77 @@
           " feet & Weight = " +
           user1.weight.toFixed(1) +
           " lb."
+      );
+    </script>
+
+    <br /><br />
+
+    <h2>Method 2 (function outside of the constructor function)</h2>
+    <p>Adding another exmaple</p>
+
+    <script>
+      function person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.yearOfBrith = bornYear;
+      }
+      function bornYear() {
+        return 2022 - this.age;
+      }
+
+      var adam1 = new person("Amir", 29);
+      document.write(adam1.name + " " + adam1.age);
+
+      document.write("<br />");
+
+      document.write(adam1.name + " " + adam1.yearOfBrith());
+    </script>
+    <br />
+
+    <p>
+      Defining the function outside of the constructor function and associate it with the object for the
+      example used in methods
+    </p>
+
+    <script>
+      function personalInfo(fullName, height, weight) {
+        this.fullName = fullName;
+        this.height = height;
+        this.weight = weight;
+        this.metricHeight = heightConverter;
+        this.metricWeight = weightConverter;
+      }
+
+      function heightConverter() {
+        return this.height * 30.48;
+      }
+
+      function weightConverter() {
+        return this.weight / 2.205;
+      }
+
+      var user1 = new personalInfo("Amirhossein Moravveji", 5.545, 271);
+
+      document.write(
+        "New user is: " +
+          user1.fullName +
+          ". Height: " +
+          user1.height +
+          " feet & Weight: " +
+          user1.weight +
+          " lb"
+      );
+
+      document.write("<p>Having user's informaiton in metric units</p>");
+
+      document.write(
+        "New user is: " +
+          user1.fullName +
+          ". Height: " +
+          user1.metricHeight().toFixed(0) +
+          " cm & Weight: " +
+          user1.metricWeight().toFixed(0) +
+          " kg"
       );
     </script>
 
