@@ -256,6 +256,26 @@
       document.write(p.name + " " + p.age);
     </script>
 
+    <h2>Testing something else here:</h2>
+
+    <script>
+      function person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.changeName = funcAmir;
+      }
+
+      function funcAmir() {
+        return (this.name = "Agha Amil");
+      }
+
+      var p = new person("Ali", 30);
+      document.write(p.name + " " + p.age);
+      document.write("<br />");
+
+      document.write(p.changeName() + " " + p.age);
+    </script>
+
     <br />
   </body>
 </html>
