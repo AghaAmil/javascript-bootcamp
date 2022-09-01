@@ -98,6 +98,117 @@
       document.write(person["age"]);
     </script>
 
+    <h2>The Math Object</h2>
+
+    <script>
+      document.write(Math.PI);
+      document.write("<br />");
+
+      document.write(Math.LN2);
+      document.write("<br />");
+
+      var number = Math.sqrt(4);
+      document.write(number);
+
+      document.write("<br />");
+
+      document.write(Math.ceil(Math.random() * 100));
+
+      // var num = prompt("Enter a number to see the magic:");
+      // var cal = Math.sqrt(num);
+
+      // alert("The square root of " + num + " is " + cal.toFixed(2));
+    </script>
+    <br />
+
+    <h2>The Data Object</h2>
+    <script>
+      // function myalert() {
+      //   alert("Hi ");
+      // }
+
+      // setInterval(myalert, 10000);
+
+      document.write("<p>- Using new Date(), create a new date object with the current date and time</p>");
+
+      var time = new Date();
+      document.write(time);
+
+      document.write("<br />");
+      document.write("<br />");
+
+      document.write(
+        "<p>- The other ways to initialize dates allow for the creation of new date objects from the specified date and time</p>"
+      );
+
+      document.write("Initial Date() time : (Unix hejrat time): ");
+      document.write(new Date(0));
+
+      document.write("<br />");
+
+      document.write("Printing out using Date(): ");
+      document.write(new Date(86400000));
+
+      document.write("<br />");
+
+      document.write("Printing out using Date(): ");
+      document.write(new Date("January 2, 2015 10:42:00"));
+
+      document.write("<br />");
+
+      document.write("Printing out using Date(): ");
+      document.write(new Date(88, 11, 11, 11, 42, 0, 0));
+
+      document.write("<br />");
+    </script>
+    <br />
+
+    <h2>Using Date Methods</h2>
+    <p>Check the result in console.</p>
+
+    <script>
+      var d = new Date();
+      var hours = d.getHours();
+      var years = d.getFullYear();
+
+      console.log(hours);
+      console.log(years);
+    </script>
+
+    <p>Let's create a program that prints the current time to the browser once every second</p>
+    <p id="currentTime"></p>
+
+    <script>
+      function printTime() {
+        var time = new Date();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+        document.getElementById("currentTime").innerHTML = hour + ":" + min + ":" + sec;
+      }
+
+      setInterval(printTime, 1000);
+    </script>
+
+    <h2>Store Management Problem</h2>
+    <p>You are working on a Store Manager program, which stores the prices in an array.</p>
+    <p>You need to add functionality to increase the prices by the given amount.</p>
+    <p>
+      The increase variable is taken from user input. You need to increase all the prices in the given
+      array by that amount and output to the console the resulting array.
+    </p>
+
+    <script>
+      var increment = 9;
+      var prices = [98.99, 15.2, 20, 1026];
+
+      for (i = 0; i <= 3; i++) {
+        prices[i] += increment;
+      }
+
+      document.write(prices);
+    </script>
+
     <br />
   </body>
 </html>
