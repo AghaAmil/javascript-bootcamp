@@ -48,10 +48,29 @@
     <p class="demo2">This is paragaraph with class name demo2</p>
 
     <h3>getElementsByTagName</h3>
-    <p>The following example gets all div elements of the page and changes their content:</p>
+    <p>
+      The following example gets all div elements of the page and changes their content after 3 seconds:
+    </p>
     <div>This is text by html</div>
     <div>This is text by html</div>
     <div>This is text by html</div>
+    <br />
+
+    <h3>Changing Child Element</h3>
+
+    <p>
+      In below example example, select all child nodes of an element and change their content after 5
+      seconds:
+    </p>
+
+    <section id="demo3">
+      <p>These texts are nested inside a section.</p>
+      <p>Same as this one.</p>
+    </section>
+
+    <br />
+
+    <p><strong>Refresh the page to see the changes again</strong></p>
 
     <script>
       document.getElementById("demo").innerHTML = "Powered by JavaScript";
@@ -63,7 +82,7 @@
       var getDiv = document.getElementsByTagName("div");
       var timeRun = 0;
       function changeText() {
-        for (i = 0; i <= getDiv.length; i++) {
+        for (var i = 0; i <= getDiv.length; i++) {
           getDiv[i].innerHTML = "JavaScript is more powerfull than HTML.";
         }
         timeRun++;
@@ -72,6 +91,23 @@
       if (timeRun === 1) {
         clearInterval(changer);
       }
+
+      var text = document.getElementById("demo3");
+      var arr2 = text.childNodes;
+      function secChanger() {
+        var timeRun2 = 0;
+        for (var i = 0; i <= arr.length; i++) {
+          arr2[i].innerHTML = "Section's childern are in control of JS";
+        }
+        timeRun2++;
+      }
+      var timer = setInterval(secChanger, 5000);
+      if (timeRun2 === 1) {
+        clearInterval(timer);
+      }
     </script>
+    <br />
+
+    <br />
   </body>
 </html>
