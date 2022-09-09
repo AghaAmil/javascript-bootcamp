@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
+      h1 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: dodgerblue;
+      }
+
+      h2 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 2em;
+      }
+    </style>
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <hr />
+    <hr />
+    <br />
+
+    <h2>Creating Elements</h2>
+    <p>This is a demo for creating new elements using JS DOM properties</p>
+    <br />
+
+    <div id="demo">This is a div without any other content.</div>
+    <br />
+
+    <script>
+      // Creating a new paragraph
+      var p = document.createElement("p");
+      var node = document.createTextNode("This paragraph is added to the div");
+      // var node2 = document.createTextNode("This is a test.")
+
+      // Adding the text to the paragraph
+      p.appendChild(node);
+
+      var div = document.getElementById("demo");
+
+      // Adding the paragraph to the div
+      div.appendChild(p);
+    </script>
+
+    <h3>Another example of creating new elements.</h3>
+    <ol id="list">
+      <li>This is a list</li>
+      <li>We are adding some items to it.</li>
+    </ol>
+
+    <script>
+      var li = document.createElement("li");
+      var content1 = document.createTextNode("New node is created to be added.");
+
+      li.appendChild(content1);
+
+      var currentList = document.getElementById("list");
+      currentList.appendChild(li);
+    </script>
+
+    <br />
+  </body>
+</html>
