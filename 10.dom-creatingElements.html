@@ -69,6 +69,56 @@
       var currentList = document.getElementById("list");
       currentList.appendChild(li);
     </script>
+    <br />
+
+    <h3>Another example of creating new elements to remember everything.</h3>
+    <p id="demo2">This is a paragraph. A new div element is going to be added to it.</p>
+
+    <script>
+      var div = document.createElement("div");
+      var content = document.createTextNode("This div section is going to be added to paragraph above.");
+
+      div.appendChild(content);
+
+      var text = document.getElementById("demo2");
+      text.appendChild(div);
+    </script>
+    <br />
+
+    <h2>Removing Elements</h2>
+    <div id="demo3">
+      This div has two paragraphs. We are going to remove one paragaraph using JS:
+      <p id="p1">This paragraph is not going to be removed.</p>
+      <p id="p2">This paragraph is going to be removed.</p>
+    </div>
+
+    <script>
+      var parent = document.getElementsByName("demo3");
+      var child = document.getElementById("p2");
+
+      // parent.removeChild(child);
+      child.parentNode.removeChild(child);
+    </script>
+    <br />
+
+    <h2>Replacing Elements</h2>
+    <div id="demo4">
+      This div has two paragraphs. We are going to replace one paragaraph using JS:
+      <p id="p3">This paragraph is going to be replaced.</p>
+      <p id="p4">This paragraph is not going to be replaced.</p>
+    </div>
+
+    <script>
+      var newPar = document.createElement("p");
+      var parContent = document.createTextNode("I am the newly replaced paragraph.");
+
+      newPar.appendChild(parContent);
+
+      var parent1 = document.getElementById("demo4");
+      var child1 = document.getElementById("p3");
+      // parent1.replaceChild(newPar, child1);
+      // child1.parentNode.replaceChild(newPar, child1);
+    </script>
 
     <br />
   </body>
