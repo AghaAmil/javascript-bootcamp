@@ -46,34 +46,96 @@
 
     <h2>Animations</h2>
     <p>Let's create a simple HTML page with a box element that will be animated using JS.</p>
+    <p><button onclick="start()">Click To Start Magic</button></p>
 
     <div id="container">
       <div id="box"></div>
     </div>
+    <br />
 
     <script>
-      // starting position
-      var pos = 0;
-      var posTop = 0;
-      var posRight = 0;
-      // our box element
-      var box = document.getElementById("box");
+      function start() {
+        // starting position
+        var pos = 0;
+        var posTop = 0;
+        var posRight = 0;
+        // our box element
+        var box = document.getElementById("box");
 
-      var time = setInterval(move, 5);
+        clearInterval(time);
+        var time = setInterval(move, 5);
 
-      function move() {
-        if (pos <= 224) {
-          pos += 1;
-          box.style.left = pos + "px";
-        } else {
-          posTop += 1;
-          box.style.top = posTop + "px";
-          if (posTop == 225) {
-            clearInterval(time);
-            // posRight += 1;
-            // box.style.right = posRight + "px";
+        function move() {
+          if (pos <= 224) {
+            pos += 1;
+            box.style.left = pos + "px";
+          } else {
+            posTop += 1;
+            box.style.top = posTop + "px";
+            if (posTop == 225) {
+              clearInterval(time);
+              // posRight += 1;
+              // box.style.right = posRight + "px";
+            }
           }
         }
+      }
+    </script>
+
+    <h2>Event Handler</h2>
+    <p>Let's display an alert popup when the user clicks a specified button:</p>
+
+    <p><button onclick="show()">Click Me!</button></p>
+    <br />
+
+    <script>
+      function show() {
+        alert("Goh khordi click kardi!");
+      }
+    </script>
+
+    <h2>More Event Handlers</h2>
+    <p>Enter anything you want in the textbox below and see the magic:</p>
+
+    <input type="text" name="name" id="input1" onchange="change()" />
+    <br /><br />
+
+    <script>
+      function change() {
+        var x = document.getElementById("input1");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+
+    <p>Loading date & time, when the screen is loaded:</p>
+    <p id="showDate"></p>
+    <br />
+
+    <script>
+      window.onload = function showDate() {
+        var x = document.getElementById("showDate");
+        x.innerHTML = Date();
+      };
+
+      // Ask later how to add time for this case.
+    </script>
+
+    <h2>Event Listeners</h2>
+    <p>Let's create an event handler that removes itself after being executed:</p>
+    <p>
+      Once the button clicked, a random number would be generated: (<b>Note:</b> As the function has
+      removal event handler, of generating the random number for the first time, it would no longer
+      generate number when pressed.)
+    </p>
+    <p><button id="start">Generate Number</button></p>
+
+    <script>
+      var btn = document.getElementById("start");
+      btn.addEventListener("click", calFunc);
+
+      function calFunc() {
+        alert(Math.random().toFixed(3));
+        btn.removeEventListener("click", calFunc);
       }
     </script>
 
