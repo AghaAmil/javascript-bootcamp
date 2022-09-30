@@ -238,6 +238,73 @@
         }
       }
     </script>
+    <br />
+
+    <h2>Image Slider</h2>
+    <p>Now, let’s create our HTML, which includes an image and the two navigation buttons:</p>
+
+    <button onclick="prev()">Prev</button>
+    <img src="image/js-sololearn-1.jpg" id="slider" alt="a picture" width="300px" height="150px" />
+    <button onclick="next()">Next</button>
+
+    <br />
+
+    <p>Change the images using buttons.</p>
+
+    <script>
+      var images = ["image/js-sololearn-1.jpg", "image/js-sololearn-2.jpg", "image/js-sololearn-3.jpg"];
+      var num = 0;
+
+      function next() {
+        var slider = document.getElementById("slider");
+        num++;
+        console.log(num);
+        if (num >= images.length) {
+          num = 0;
+        }
+        console.log(num);
+        slider.src = images[num];
+      }
+
+      function prev() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0) {
+          num = images.length - 1;
+        }
+        slider.src = images[num];
+      }
+    </script>
+    <br />
+
+    <h2>Form Validations</h2>
+    <p>
+      For example, let's create a form with two inputs and one button. The text in both fields should be
+      the same and not blank to pass the validation.
+    </p>
+
+    <form onsubmit="return validate()" method="post">
+      Number:
+      <input type="text" name="num1" id="num1" />
+      Repeat:
+      <input type="text" name="num2" id="num2" />
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validate() {
+        var num1 = document.getElementById("num1");
+        var num2 = document.getElementById("num2");
+        if (num1.value != "" && num2.value != "") {
+          if (num1.value == num2.value) {
+            return true;
+          }
+        }
+        alert("The values should be equal and not blank");
+        return false;
+      }
+    </script>
 
     <br />
   </body>
