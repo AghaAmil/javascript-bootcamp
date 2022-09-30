@@ -102,22 +102,22 @@
     <br />
 
     <h2>Replacing Elements</h2>
-    <div id="demo4">
+    <section id="sectionId">
       This div has two paragraphs. We are going to replace one paragaraph using JS:
       <p id="p3">This paragraph is going to be replaced.</p>
       <p id="p4">This paragraph is not going to be replaced.</p>
-    </div>
+    </section>
 
     <script>
-      var newPar = document.createElement("p");
-      var parContent = document.createTextNode("I am the newly replaced paragraph.");
+      var newParagraph = document.createElement("p");
+      var paraText = document.createTextNode("This paragraph is replaced the original paragraph...");
 
-      newPar.appendChild(parContent);
+      newParagraph.appendChild(paraText);
 
-      var parent1 = document.getElementById("demo4");
-      var child1 = document.getElementById("p3");
-      // parent1.replaceChild(newPar, child1);
-      // child1.parentNode.replaceChild(newPar, child1);
+      var getSec = document.getElementById("sectionId");
+      var p3 = document.getElementById("p3");
+
+      getSec.replaceChild(newParagraph, p3);
     </script>
 
     <br />
