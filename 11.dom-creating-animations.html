@@ -21,18 +21,6 @@
         font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
         font-size: 2em;
       }
-      #container {
-        width: 300px;
-        height: 300px;
-        background-color: dodgerblue;
-        position: relative;
-      }
-      #box {
-        width: 75px;
-        height: 75px;
-        background-color: darkgrey;
-        position: absolute;
-      }
     </style>
 
     <title>Learning JS by Sololearn</title>
@@ -43,44 +31,6 @@
     <hr />
     <hr />
     <br />
-
-    <h2>Animations</h2>
-    <p>Let's create a simple HTML page with a box element that will be animated using JS.</p>
-    <p><button onclick="start()">Click To Start Magic</button></p>
-
-    <div id="container">
-      <div id="box"></div>
-    </div>
-    <br />
-
-    <script>
-      function start() {
-        // starting position
-        var pos = 0;
-        var posTop = 0;
-        var posRight = 0;
-        // our box element
-        var box = document.getElementById("box");
-
-        clearInterval(time);
-        var time = setInterval(move, 5);
-
-        function move() {
-          if (pos <= 224) {
-            pos += 1;
-            box.style.left = pos + "px";
-          } else {
-            posTop += 1;
-            box.style.top = posTop + "px";
-            if (posTop == 225) {
-              clearInterval(time);
-              // posRight += 1;
-              // box.style.right = posRight + "px";
-            }
-          }
-        }
-      }
-    </script>
 
     <h2>Event Handler</h2>
     <p>Let's display an alert popup when the user clicks a specified button:</p>

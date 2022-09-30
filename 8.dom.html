@@ -21,6 +21,18 @@
         font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
         font-size: 2em;
       }
+      #container {
+        width: 300px;
+        height: 300px;
+        background-color: dodgerblue;
+        position: relative;
+      }
+      #box {
+        width: 75px;
+        height: 75px;
+        background-color: darkgrey;
+        position: absolute;
+      }
     </style>
 
     <title>Learning JS by Sololearn</title>
@@ -76,6 +88,7 @@
     <script>
       var divBox = document.getElementsByTagName("div");
       var runTime = 0;
+      var timer = setInterval(changer, 3000);
 
       function changer() {
         for (var i = 0; i < divBox.length; i++) {
@@ -90,8 +103,6 @@
           clearInterval(timer);
         }
       }
-
-      var timer = setInterval(changer, 3000);
     </script>
 
     <h3>Changing Child Element</h3>
@@ -107,6 +118,8 @@
     </section>
 
     <script>
+      var timer1 = setInterval(changer1, 6000);
+
       function changer1() {
         var secBox = document.getElementById("section");
         var secChild = secBox.childNodes;
@@ -123,8 +136,6 @@
           clearInterval(timer1);
         }
       }
-
-      var timer1 = setInterval(changer1, 6000);
     </script>
     <br />
 
@@ -152,6 +163,8 @@
       // Getting the content of img tag using getElementById was not working
       // Therefore class="img" for img tag is created and content is get using querySelector
 
+      var timer2 = setInterval(imgChanger, 9000);
+
       function imgChanger() {
         var runTime2 = 0;
         var image = document.querySelector(".img");
@@ -169,8 +182,6 @@
           clearInterval(timer2);
         }
       }
-
-      var timer2 = setInterval(imgChanger, 9000);
     </script>
     <br />
 
@@ -189,6 +200,43 @@
       container.style.backgroundColor = "lightblue";
       container.style.padding = "10px";
       container.style.color = "dodgerblue";
+    </script>
+
+    <h2>Animations</h2>
+    <p>Let's create a simple HTML container with a box element that will be animated using JS.</p>
+    <p><button onclick="start()">Click To Start Magic</button></p>
+
+    <section id="container">
+      <section id="box"></section>
+    </section>
+
+    <script>
+      function start() {
+        // starting position
+        var pos = 0;
+        var posTop = 0;
+        var posRight = 0;
+        // our box element
+        var box = document.getElementById("box");
+
+        clearInterval(time);
+        var time = setInterval(move, 5);
+
+        function move() {
+          if (pos <= 224) {
+            pos += 1;
+            box.style.left = pos + "px";
+          } else {
+            posTop += 1;
+            box.style.top = posTop + "px";
+            if (posTop == 225) {
+              clearInterval(time);
+              // posRight += 1;
+              // box.style.right = posRight + "px";
+            }
+          }
+        }
+      }
     </script>
 
     <br />
