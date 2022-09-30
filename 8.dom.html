@@ -75,7 +75,7 @@
 
     <script>
       var divBox = document.getElementsByTagName("div");
-      var timeRun = 0;
+      var runTime = 0;
 
       function changer() {
         for (var i = 0; i < divBox.length; i++) {
@@ -83,22 +83,22 @@
           console.log(divBox[i]);
         }
 
-        timeRun++;
-        console.log(timeRun);
+        runTime++;
+        console.log(runTime);
 
-        if (timeRun == 1) {
-          clearInterval(timer1);
+        if (runTime == 1) {
+          clearInterval(timer);
         }
       }
 
-      var timer1 = setInterval(changer, 3000);
+      var timer = setInterval(changer, 3000);
     </script>
 
     <h3>Changing Child Element</h3>
     <p>
       In below example example, select all child nodes of the section elements and change their content
       after
-      <b>5 seconds</b>:
+      <b>6 seconds</b>:
     </p>
 
     <section id="section" style="border: 2px solid red; padding: 5px">
@@ -107,30 +107,89 @@
     </section>
 
     <script>
-      function changer2() {
+      function changer1() {
         var secBox = document.getElementById("section");
         var secChild = secBox.childNodes;
-        var timeRun = 0;
+        var runTime1 = 0;
 
         for (var x = 0; x < secChild.length; x++) {
           secChild[x].innerHTML = "The children of this section is taken away by JS. Hahahaha... ";
           console.log(secChild[x]);
         }
-        timeRun++;
-        console.log(timeRun);
+        runTime1++;
+        console.log(runTime1);
 
-        if (timeRun == 1) {
-          clearInterval(timer);
+        if (runTime1 == 1) {
+          clearInterval(timer1);
         }
       }
 
-      var timer = setInterval(changer2, 5000);
+      var timer1 = setInterval(changer1, 6000);
     </script>
-
     <br />
 
     <p><strong>Refresh the page to see the changes again</strong></p>
     <br />
+
+    <h2>Changing Attributes</h2>
+    <p>For example, we can change the src attribute of an image:</p>
+
+    <img src="image/js-sololearn-1.jpg" alt="a picture" class="img" />
+
+    <p>The image source will be changed after <b>9 seconds</b>.</p>
+    <br />
+
+    <p>
+      Also We can change the href attribute of a link:<br />
+      The link below directs the user to the google website. However, once the page is loaded, open the
+      link again after <b>9 seconds</b>.<br />
+    </p>
+    <p>See by yourself ...</p>
+
+    <a href="https://google.com">Go to Google</a>
+
+    <script>
+      // Getting the content of img tag using getElementById was not working
+      // Therefore class="img" for img tag is created and content is get using querySelector
+
+      function imgChanger() {
+        var runTime2 = 0;
+        var image = document.querySelector(".img");
+        var link = document.getElementsByTagName("a");
+
+        link[0].href = "http://w3schools.com";
+
+        image.src = "image/js-sololearn-2.jpg";
+        console.log(image);
+
+        runTime2++;
+        console.log(runTime2);
+
+        if (runTime2 == 1) {
+          clearInterval(timer2);
+        }
+      }
+
+      var timer2 = setInterval(imgChanger, 9000);
+    </script>
+    <br />
+
+    <h2>Changing Style</h2>
+    <p>
+      The style of below semmantic element (article) is changed using JavaScript.<br />
+      Background color is added.<br />
+      Font color changed to dodgerblue.<br />
+      10px padding is also added.
+    </p>
+
+    <article id="sample">The style of this DIV is changed by JS.</article>
+
+    <script>
+      var container = document.getElementById("sample");
+      container.style.backgroundColor = "lightblue";
+      container.style.padding = "10px";
+      container.style.color = "dodgerblue";
+    </script>
 
     <br />
   </body>
