@@ -87,7 +87,87 @@
       console.log(sum);
     </script>
 
-    
+    <h2>Loops in ECMAScript 6</h2>
+    <p>To Check the examples, related the loops in ES6, Check the console.</p>
+    <br />
+
+    <script>
+      // iterate over values in a list
+      let arr = [1, 2, 3, 4];
+      for (let i = 0; i < arr.length; i++) {
+        console.log(i);
+      }
+
+      //  iterating over the enumerable keys of an object
+      let obj = { x: 1, y: 2, z: 3 };
+      for (let v in obj) {
+        console.log(v);
+      }
+
+      // iterating over iterable objects
+      let list = ["A", "B", "C"];
+      for (let val of list) {
+        console.log(val);
+      }
+
+      // iterate over other objects such as strings
+
+      let name2 = "Mahsa Amini";
+      for (let char of name2) {
+        console.log(char);
+      }
+    </script>
+
+    <h2>Functions in ECMAScript 6</h2>
+    <p><b>Before:</b></p>
+
+    <script>
+      function cal(x, y) {
+        var sum1 = x + y;
+        return sum1;
+      }
+
+      document.write("The sum of 23 + 43 is " + cal(23, 43));
+    </script>
+
+    <br /><br />
+    <p><b>ES6 Syntax</b></p>
+
+    <script>
+      const cal1 = (f, j) => {
+        let sum2 = f + j;
+        return sum2;
+      };
+
+      document.write("The sum of 16 + 76 is " + cal1(16, 76));
+    </script>
+
+    <br /><br />
+    <p><b>Aother simple version:</b></p>
+
+    <script>
+      const user = (name3) => "Welcome User " + name3;
+
+      document.write(user("kecy1amr"));
+
+      // old method
+      var arr1 = [2, 3, 4, 5];
+      arr1.forEach(function (el) {
+        console.log(el * 2);
+      });
+
+      // ES6
+      var arr2 = [2, 3, 4, 5];
+      arr2.forEach((v) => {
+        console.log(v * 3);
+      });
+
+      // another function in ES6
+      const test = (a, b = 3, c = 42) => {
+        return a + b + c;
+      };
+      console.log(test(5)); //50
+    </script>
 
     <br />
   </body>
