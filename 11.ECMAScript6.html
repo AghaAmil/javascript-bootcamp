@@ -34,8 +34,8 @@
 
     <h2>Var & Let</h2>
     <p>
-      To demonstrate the difference in scope between var and let, consider this example: (Check the result
-      in the console)
+      To demonstrate the difference in scope between var and let, consider this example:
+      <b>(Check the console to see the result)</b>
     </p>
     <p><button onclick="varTest()">var Test</button></p>
     <p><button onclick="letTest()">let Test</button></p>
@@ -64,7 +64,7 @@
     <h2>Template Literals in ES6</h2>
     <p>
       Template literals are a way to output variables in the string. Prior to ES6 we had to break the
-      string, for example:
+      string, For example <b>(Check the console to see the result)</b>:
     </p>
     <br />
 
@@ -88,7 +88,7 @@
     </script>
 
     <h2>Loops in ECMAScript 6</h2>
-    <p>To Check the examples, related the loops in ES6, Check the console.</p>
+    <p>To Check the examples, related the loops in ES6, <b>(Check the console to see the result)</b></p>
     <br />
 
     <script>
@@ -99,9 +99,20 @@
       }
 
       //  iterating over the enumerable keys of an object
+      // example 1
       let obj = { x: 1, y: 2, z: 3 };
       for (let v in obj) {
         console.log(v);
+      }
+      // example 2
+      let userID = {
+        user1: 1,
+        user2: 2,
+        user3: 3,
+        user4: 4,
+      };
+      for (let cir in userID) {
+        console.log(cir);
       }
 
       // iterating over iterable objects
@@ -111,7 +122,6 @@
       }
 
       // iterate over other objects such as strings
-
       let name2 = "Mahsa Amini";
       for (let char of name2) {
         console.log(char);
@@ -143,12 +153,20 @@
     </script>
 
     <br /><br />
+
     <p><b>Aother simple version:</b></p>
+    <p>Click on the below button</p>
+    <p><button onclick="show()">Click Me!</button></p>
+
+    <br />
 
     <script>
       const user = (name3) => "Welcome User " + name3;
 
       document.write(user("kecy1amr"));
+
+      // button fuction
+      const show = () => alert("This is an alert!");
 
       // old method
       var arr1 = [2, 3, 4, 5];
