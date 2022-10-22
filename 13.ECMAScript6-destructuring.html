@@ -37,6 +37,7 @@
       ES6 has added a shorthand syntax for destructuring an array.
       <b>(Check the console to see the result)</b>
     </p>
+    <br />
 
     <script>
       // The following example demonstrates how to unpack the elements of an array into distinct variables:
@@ -72,6 +73,46 @@
       console.log(b);
       console.log(c);
       console.log(d);
+    </script>
+
+    <h2>ES6 Object Destructuring</h2>
+    <p>
+      Similar to Array destructuring, Object destructuring unpacks properties into distinct variables.
+      <b>(Check the console to see the result)</b>
+    </p>
+
+    <script>
+      let object1 = { r: 100, t: true };
+      let { r, t } = object1;
+
+      console.log("Object Destructuring");
+      console.log(r);
+      console.log(t);
+
+      // We can assign without declaration
+
+      // let a1, b1;
+      // ({ a1, b1 } = { a1: "Hello", b1: " Amir" });
+
+      // In otherhand
+      let { a1, b1 } = { a1: "Hello", b1: " Amir" };
+
+      console.log(a1 + b1);
+
+      // You can also assign the object to new variable names.
+      var obj2 = { id: 123, name2: true };
+      var { id: fooo, name2: bar } = obj2;
+
+      console.log(fooo);
+      console.log(bar);
+      console.log(obj2);
+
+      // Finally you can assign default values to variables, in case the value unpacked from the object is undefined.
+      var obj3 = { id1: 0033, name3: "Amirhossein" };
+      let { id1 = 0066, userId = 2334 } = obj3;
+
+      console.log(id1);
+      console.log(userId);
     </script>
 
     <br />
