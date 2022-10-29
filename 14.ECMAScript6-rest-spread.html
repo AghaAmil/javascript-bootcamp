@@ -33,7 +33,28 @@
     <br />
 
     <h2>ES6 Rest Parameters</h2>
-    <p>Let's write a function that checks if an array contains all the arguments passed:</p>
+    <p>
+      Let's write a function that checks if an array contains all the arguments passed:
+      <b>(Check the console to see the result)</b>
+    </p>
+    <br />
+
+    <h2>ES6 The Spread Operator</h2>
+    <p>
+      This operator is similar to the Rest Parameter, but it has another purpose when used in objects or
+      arrays or function calls (arguments).
+      <b>(Check the console to see the result)</b>
+    </p>
+
+    <p>
+      Before ES6, we used the following syntax to add an item at middle of an array:
+      <b>(Check the console to see the result)</b>
+    </p>
+
+    <p>
+      In objects it copies the own enumerable properties from the provided object onto a new object.
+      <b>(Check the console to see the result)</b>
+    </p>
 
     <script>
       function containsAll(arr) {
@@ -54,7 +75,6 @@
       console.log(containsAll(x, 6, 4, 9));
 
       // ES6 rest parameter:
-
       const containsAll1 = (array, ...nums) => {
         for (let num of nums) {
           if (array.indexOf(num) === -1) {
@@ -64,14 +84,81 @@
         return true;
       };
 
-      // Checking the output
-
-      function magic(...nums) {
+      // Checking the output:
+      const magic = (...input) => {
         let sum = 0;
-        nums.filter((n) => n % 2 == 0).map((el) => (sum += el));
+        input.filter((n) => n % 2 == 0).map((el) => (sum += el));
         return sum;
+      };
+
+      console.log(magic(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+      // Another example:
+      let arr1 = [2, 3, 4, 5, 7];
+
+      let result = arr1.map((r) => r * 3);
+
+      console.log(result);
+
+      // It is common to pass the elements of an array as arguments to a function.
+      // Before ES6, we used the following method:
+
+      function myfunction(q1, w1, e1, r1) {
+        return q1 + w1 + e1 + r1;
       }
-      console.log(magic(1, 2, 3, 4, 5, 6));
+
+      var args = [2, 3, 4];
+      console.log(myfunction.apply(null, args.concat(5)));
+
+      // After ES6:
+
+      const myfunction2 = (q2, w2, e2, r2) => {
+        console.log(q2 + w2 + e2 + r2);
+      };
+
+      var args1 = [3, 4, 5];
+      myfunction2(...args1, 6);
+
+      // Another example:
+      var arrDate = [1970, 0, 1];
+      var newDate = new Date(...arrDate);
+      console.log(newDate);
+
+      // Before ES6
+      var arr2 = ["One", "Two", "Five"];
+      arr2.splice(2, 0, "Three");
+      arr2.splice(3, 0, "Four");
+      console.log(arr2);
+
+      // After Es6
+      let arr3Plus = ["Three", "Four"];
+      let arr3 = ["One", "Two", ...arr3Plus, "Five"];
+      console.log(arr3);
+
+      // Spread in object literals
+      const obj1 = {
+        name: "Amir",
+        age: 29,
+      };
+      const obj2 = {
+        name: "Ali",
+        id: 7868,
+      };
+
+      const cloneObject = { ...obj1 };
+      const mergeObject = { ...obj1, ...obj2 };
+
+      console.log(cloneObject);
+      console.log(mergeObject);
+
+      // However, if you try to merge them you will not get the result you expected:
+      const merge = (...objects) => ({ ...objects });
+
+      let mergeObject1 = merge(obj1, obj2);
+      console.log(mergeObject1);
+
+      let mergeObject2 = merge({}, obj1, obj2);
+      console.log(mergeObject2);
     </script>
 
     <br />
