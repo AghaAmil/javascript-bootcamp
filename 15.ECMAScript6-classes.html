@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
+      h1 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: dodgerblue;
+      }
+
+      h2 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 2em;
+      }
+    </style>
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <hr />
+    <hr />
+    <br />
+
+    <h2>Classes in ES6</h2>
+    <p>
+      In this lesson we'll explain how to create a class that can be used to create multiple objects of the
+      same structure.
+      <b>(Check the console to see the result)</b>
+    </p>
+
+    <script>
+      // create a class
+      // class methods in ES6
+      class rectangle {
+        constructor(height, width) {
+          this.height = height;
+          this.width = width;
+        }
+
+        get area() {
+          return this.calArea();
+        }
+
+        calArea() {
+          return this.height * this.width;
+        }
+      }
+
+      const reqt1 = new rectangle(5, 5);
+      const reqt2 = new rectangle(2, 3);
+
+      console.log(reqt1);
+      console.log(reqt1.area);
+      console.log(reqt2.area);
+
+      // creating using different method
+      var square = class {
+        constructor(height, width) {
+          this.height = height;
+          this.width = width;
+        }
+
+        get area() {
+          return this.calArea();
+        }
+
+        calArea() {
+          return this.height * this.height * this.width;
+        }
+      };
+
+      const squ1 = new square(4, 4);
+
+      console.log(squ1);
+      console.log(squ1.area);
+
+      // Static Method
+      class point {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+        static distance(a, b) {
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          return Math.hypot(dx, dy);
+        }
+      }
+
+      const p1 = new point(7, 2);
+      const p2 = new point(3, 8);
+
+      console.log(point.distance(p1, p2).toFixed(2));
+      // console.log(dx);
+      // console.log(dy);
+
+      // Inheritance in ES6
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+        speak() {
+          console.log(this.name + " make a noise");
+        }
+      }
+
+      class Dog extends Animal {
+        speak() {
+          console.log(this.name + " barks");
+        }
+      }
+
+      let aDog = new Dog("Rex");
+      aDog.speak();
+
+      // The same example, calling the parrent method
+      class Animal1 {
+        constructor(name) {
+          this.name = name;
+        }
+        speak() {
+          console.log(this.name + " make a noise");
+        }
+      }
+
+      class Dog1 extends Animal1 {
+        speak() {
+          super.speak();
+          console.log(this.name + " is a bad boy");
+        }
+      }
+
+      let aDog1 = new Dog1("Yalan");
+      aDog1.speak();
+    </script>
+
+    <br />
+  </body>
+</html>
