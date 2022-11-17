@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
+      }
+
+      h1 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: dodgerblue;
+      }
+
+      h2 {
+        font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+        font-size: 2em;
+      }
+    </style>
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <h1>(Review JavaScript)</h1>
+    <hr />
+    <hr />
+    <br />
+
+    <h2>Math Operators</h2>
+    <script>
+      // eval() function returns the result of a string expression
+      console.log(eval("8 * 12 + 12.3 - 32 + 45"));
+
+      // crazy stuff
+      console.log(10 / 0);
+    </script>
+
+    <h2>Assignment Operators</h2>
+    <script>
+      var x = 10;
+      var y = 11;
+
+      console.log((x -= y += 9));
+      // y = y + 9 = 20
+      // x = x - 20 = -10
+    </script>
+
+    <h2>Comparison Operators</h2>
+    <script>
+      console.log(10 !== "10");
+    </script>
+
+    <h2>The switch Statement</h2>
+    <script>
+      var color = "green";
+
+      console.log("Color: " + color);
+
+      switch (color) {
+        case "blue":
+          console.log("1. The color is " + color);
+          break;
+        case "green":
+          console.log("2. The color is " + color);
+          break;
+        case "red":
+          console.log("3. The color is " + color);
+          break;
+        default:
+          console.log("The color does not exits");
+      }
+    </script>
+
+    <h2>The For loop</h2>
+    <script>
+      for (var i = 1; i < 6; i++) {
+        console.log(i);
+      }
+
+      // another example
+      var i1;
+      var text;
+
+      for (i1 = 0, text = ""; i1 <= 5; i1++) {
+        text = i1;
+        document.write(i1 + " " + text + "<br />");
+      }
+    </script>
+  </body>
+</html>
