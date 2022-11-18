@@ -93,5 +93,42 @@
         document.write(i1 + " " + text + "<br />");
       }
     </script>
+
+    <h2>Project Snail</h2>
+    <script>
+      var distance = 31;
+      var day = 0;
+
+      while (distance > 0) {
+        day++;
+        distance -= 7;
+
+        if (distance > 0) {
+          distance += 2;
+        }
+      }
+
+      console.log("Snail will be out in: ");
+      console.log(day + " Day(s)");
+    </script>
+
+    <h2>Functions</h2>
+    <p>a function getting multiple parameters.</p>
+    <script>
+      func("AghaAmil", 29);
+      document.write("<br />");
+      func("Akbar", 34);
+      document.write("<br />");
+      func();
+
+      function func(name, age) {
+        document.write("Hello, " + name + ". You are " + age + " years old.");
+      }
+    </script>
+
+    <h2>The Alert, Prompt, Confirm boxes</h2>
+    <script>
+      // alert("Welcome to JavaScript by\nAghaAmil");
+    </script>
   </body>
 </html>
