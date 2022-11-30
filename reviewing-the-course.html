@@ -128,7 +128,51 @@
 
     <h2>The Alert, Prompt, Confirm boxes</h2>
     <script>
-      // alert("Welcome to JavaScript by\nAghaAmil");
+      /*
+      alert("In the up coming window\nJust enter your name... or maybe not");
+
+      var name1 = prompt("Please enter your name...");
+
+      if (name1 == null || name1 == "") {
+        document.write("You did not enter your name when its been asked.");
+      } else {
+        document.write("Your name is: " + name1);
+      }
+
+      document.write("<br />");
+      document.write("<br />");
+
+      var confTest = confirm("Confirm your are enjoying JavaScript!!");
+
+      if (confTest == false && name1 != null && name1 != "") {
+        document.write("Hey " + name1 + ", do you really thing JS is not amazing.");
+      } else if (confTest == true && name1 != null && name1 != "") {
+        document.write("Yeah " + name1 + ", JavaScript is really sexy.");
+      } else {
+        document.write(
+          "You are not able to see this section as you have not entered your name. Referesh the page to try again."
+        );
+      }
+      */
+    </script>
+
+    <h2>JavaScript Objects</h2>
+    <script>
+      // Simple object
+      var person = {
+        name: "Amirhossein",
+        lname: "Moravveji Kabir",
+        age: 29,
+        tel: 0015556732,
+      };
+
+      console.log("\n");
+      console.log("JavaScript Objects");
+      console.log(person.name);
+      console.log(person["lname"]);
+      console.log(person["lname"].length);
+
+      // object constructor
     </script>
   </body>
 </html>
