@@ -173,6 +173,37 @@
       console.log(person["lname"].length);
 
       // object constructor
+      function objConstructor(fname, id, className) {
+        this.name = fname;
+        this.id = id;
+        this.className = className;
+      }
+
+      var newobj1 = new objConstructor("Amirhossin", 7868, "#class1");
+      var newobj2 = new objConstructor("Majid", 1234, "#class2");
+
+      console.log("\n");
+      console.log("Objects created using object constructor");
+      console.log(newobj1.name);
+      console.log(newobj2.className);
+      console.log(newobj1);
+      console.log(newobj1["name"]);
+
+      // Methods
+      function shopper(productID, price) {
+        this.product = productID;
+        this.price = price;
+        this.changePrice = function (disount) {
+          this.price = price -= (price * disount / 100);
+        };
+      }
+
+      var shopItem1 = new shopper("LD1493", 1900);
+      document.write(shopItem1.product + ", Price: " + shopItem1.price);
+
+      shopItem1.changePrice(20);
+      document.write("<br />");
+      document.write(shopItem1.product + ", Dicounted Price: " + shopItem1.price);
     </script>
   </body>
 </html>
