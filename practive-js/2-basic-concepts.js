@@ -79,3 +79,31 @@ console.log("x = " + x);
 console.log("y = " + y);
 console.log("z = " + z);
 document.getElementById("sp21").innerHTML = (x -= y += 9).toFixed(3);
+
+console.log("\n");
+console.log("3. Comparison Operators");
+
+var num1 = 10;
+document.getElementById("sp22").innerHTML = num1 == "10";
+document.getElementById("sp23").innerHTML = num1 == 10.1;
+document.getElementById("sp24").innerHTML = num1 == 10;
+
+document.getElementById("sp25").innerHTML = num1 === "10";
+document.getElementById("sp26").innerHTML = num1 === 10.1;
+document.getElementById("sp27").innerHTML = num1 === 10;
+
+document.getElementById("sp28").innerHTML = num1 != "10";
+document.getElementById("sp29").innerHTML = num1 != 10.1;
+document.getElementById("sp30").innerHTML = num1 != 10;
+
+document.getElementById("sp31").innerHTML = num1 !== "10";
+document.getElementById("sp32").innerHTML = num1 !== 10.1;
+document.getElementById("sp33").innerHTML = num1 !== 10;
+
+document.getElementById("sp34").innerHTML = num1 > 10.1;
+document.getElementById("sp35").innerHTML = num1 > 10;
+document.getElementById("sp36").innerHTML = num1 < 23;
+
+document.getElementById("sp37").innerHTML = num1 >= 10.1;
+document.getElementById("sp38").innerHTML = num1 <= 10;
+document.getElementById("sp39").innerHTML = num1 >= 23;
