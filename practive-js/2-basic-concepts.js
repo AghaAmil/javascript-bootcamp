@@ -30,6 +30,10 @@ document.getElementById("sp8").innerHTML = x / 0;
 document.getElementById("sp9").innerHTML = 26 % 6;
 document.getElementById("sp10").innerHTML = (y % x).toFixed(3);
 
+console.log("x = " + x);
+console.log("y = " + y);
+console.log("z = " + z);
+
 // Increment & Decrement
 var a = 0,
   b = 10;
@@ -58,3 +62,20 @@ a = --b;
 
 document.getElementById("sp17").innerHTML = a;
 document.getElementById("sp18").innerHTML = b;
+
+console.log("\n");
+console.log("2. Assignment Operators");
+
+// assignment operators
+document.getElementById("sp19").innerHTML = x += y;
+document.getElementById("sp20").innerHTML = z *= y;
+
+// Reassigning values to our variables;
+var x = 10.34;
+var y = 23.984;
+var z = 3;
+
+console.log("x = " + x);
+console.log("y = " + y);
+console.log("z = " + z);
+document.getElementById("sp21").innerHTML = (x -= y += 9).toFixed(3);
