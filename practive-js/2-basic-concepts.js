@@ -107,3 +107,19 @@ document.getElementById("sp36").innerHTML = num1 < 23;
 document.getElementById("sp37").innerHTML = num1 >= 10.1;
 document.getElementById("sp38").innerHTML = num1 <= 10;
 document.getElementById("sp39").innerHTML = num1 >= 23;
+
+// logical operators
+document.getElementById("sp40").innerHTML = 4 > 2 && 10 < 15;
+document.getElementById("sp41").innerHTML = !(4.3 > 4.6 || 49 >= 49);
+
+var userAge = 16;
+var userAge1 = 31;
+document.getElementById("sp42").innerHTML = userAge < 18 ? "Too Young" : "Old Enough";
+document.getElementById("sp43").innerHTML = userAge1 < 18 ? "Too Young" : "Old Enough";
+
+var hour1 = 12;
+var hour2 = 20;
+var hour3 = 0;
+document.getElementById("sp44").innerHTML = 0 <= hour1 && hour1 <= 12 ? "AM" : "PM";
+document.getElementById("sp45").innerHTML = 0 <= hour2 && hour2 <= 12 ? "AM" : "PM";
+document.getElementById("sp46").innerHTML = 0 <= hour3 && hour3 <= 12 ? "AM" : "PM";
