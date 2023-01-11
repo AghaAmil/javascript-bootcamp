@@ -118,3 +118,9 @@ switch (favColor) {
     document.getElementById("sp12").innerHTML = "Your Selected Color Does Not Exist";
     break;
 }
+
+// for loops
+
+for (i = 0; i <= 10; i++) {
+  document.getElementById("p1").innerHTML = i + " ";
+}
