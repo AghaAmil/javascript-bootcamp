@@ -120,7 +120,76 @@ switch (favColor) {
 }
 
 // for loops
-
+var loopResult = [];
 for (i = 0; i <= 10; i++) {
-  document.getElementById("p1").innerHTML = i + " ";
+  loopResult.push(i);
 }
+
+console.log(loopResult);
+document.getElementById("p1").innerHTML = loopResult;
+
+// while loops
+var loopResult1 = [];
+var i1 = 0;
+
+while (i1 <= 10) {
+  loopResult1.push(i1);
+  i1++;
+}
+
+console.log(loopResult1);
+document.getElementById("p2").innerHTML = loopResult1;
+
+// do while loop
+var loopResult2 = [];
+var j = 23;
+do {
+  loopResult2.push(j);
+  j++;
+} while (j <= 30);
+
+console.log(loopResult2);
+document.getElementById("p3").innerHTML = loopResult2;
+
+// example
+// input 1
+var distance = 31;
+var snaileMovement = 0;
+var day = 0;
+
+while (snaileMovement < distance) {
+  snaileMovement += 7;
+  day++;
+  if (snaileMovement >= distance) break;
+  snaileMovement -= 2;
+}
+
+document.getElementById("sp13").innerHTML = day;
+
+// input 2
+var distance = 42;
+var snaileMovement = 0;
+var day = 0;
+
+while (snaileMovement < distance) {
+  snaileMovement += 7;
+  day++;
+  if (snaileMovement >= distance) break;
+  snaileMovement -= 2;
+}
+
+document.getElementById("sp14").innerHTML = day;
+
+// input 3
+var distance = 128;
+var snaileMovement = 0;
+var day = 0;
+
+while (snaileMovement < distance) {
+  snaileMovement += 7;
+  day++;
+  if (snaileMovement >= distance) break;
+  snaileMovement -= 2;
+}
+
+document.getElementById("sp15").innerHTML = day;
