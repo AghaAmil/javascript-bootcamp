@@ -48,3 +48,28 @@ console.log("num1 = 34");
 console.log("num2 = 25");
 console.log("num3 = 71");
 console.log(avg(34, 25, 71).toFixed(2));
+
+// alert, prompt, confirm
+console.log("\n");
+console.log("5. Alert, Prompt, Confirmt");
+
+alert("Enter your name \nin the up coming window!");
+
+var user = prompt("Please Enter Your Name:");
+console.log("Name entered in prompt: " + user);
+
+var result = confirm("Are you enjoying JavaScript through sololearn!?");
+
+if (user == null) {
+  document.getElementById("sp1").innerHTML = "You have not enter your name (NULL is stored)";
+} else {
+  document.getElementById("sp1").innerHTML = user;
+}
+
+if (user == null) {
+  document.getElementById("p1").innerHTML = "You haven't enter your name, thus cannot see this section";
+} else if (user != null && result == true) {
+  document.getElementById("p1").innerHTML = user + "! Sololearn is a good source to start learning JS";
+} else {
+  document.getElementById("p1").innerHTML = user + "! please check other sources to learn JS";
+}
