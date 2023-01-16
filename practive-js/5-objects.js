@@ -55,3 +55,51 @@ function flightScheduler(flightNumber, flightStatus) {
 var flight1 = new flightScheduler("NGT 929", "landed");
 document.getElementById("sp2").innerHTML =
   "Flight " + flight1.flightNumber + " has " + flight1.flightStatus;
+
+// methods
+console.log("\n");
+console.log("3. Methods");
+
+function deviceInfo(deviceName, deviceId, deviceType, deviceCreatedDate) {
+  this.dName = deviceName;
+  this.dId = deviceId;
+  this.dType = deviceType;
+  this.dCreated = deviceCreatedDate;
+  this.dAge = ageCal;
+  this.changeId = function (id) {
+    this.dId = id;
+  };
+}
+
+function ageCal() {
+  return 2022 - this.dCreated;
+}
+
+var device1 = new deviceInfo("Apple Watch", "15#001", "Wearable", 2011);
+
+console.log(device1);
+console.log(device1.dCreated);
+
+device1.changeId("15#1#001");
+
+console.log(device1);
+console.log("The new device is: " + device1.dId);
+console.log(device1.ageCal);
+
+// store manager
+function storeManager(productId, price) {
+  this.product = productId;
+  this.price = price;
+  this.dicountPrice = function (discount) {
+    this.price = price -= (price * discount) / 100;
+  };
+}
+
+var prod1 = new storeManager("LD1493", 1700);
+
+document.getElementById("sp3").innerHTML = prod1.product + " price: " + prod1["price"];
+
+var discount = 17;
+prod1.dicountPrice(discount);
+
+document.getElementById("sp4").innerHTML = prod1.product + " discounted price: " + prod1["price"];
