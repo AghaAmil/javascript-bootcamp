@@ -103,3 +103,17 @@ var discount = 17;
 prod1.dicountPrice(discount);
 
 document.getElementById("sp4").innerHTML = prod1.product + " discounted price: " + prod1["price"];
+
+// contract manager
+
+function contractMang(contractName, ContractNumber) {
+  this.cName = contractName;
+  this.cNumber = ContractNumber;
+  this.print = function () {
+    console.log(this.cName + ": " + this.cNumber);
+  };
+}
+
+contract1 = new contractMang("David-Contractor", "FD-345");
+console.log(contract1);
+contract1.print();
