@@ -84,7 +84,7 @@ device1.changeId("15#1#001");
 
 console.log(device1);
 console.log("The new device is: " + device1.dId);
-console.log(device1.ageCal);
+console.log(device1.dAge());
 
 // store manager
 function storeManager(productId, price) {
