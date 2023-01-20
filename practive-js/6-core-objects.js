@@ -32,3 +32,11 @@ console.log(course2[3]);
 course2[3] = "Arabic Studies";
 
 console.log(course2);
+
+// the length property
+console.log("The length of the courses array is: " + course2.length);
+
+// concat method
+var fullCourse = course2.concat(courses);
+console.log(fullCourse);
+console.log(fullCourse.length);
