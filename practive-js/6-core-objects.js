@@ -40,3 +40,30 @@ console.log("The length of the courses array is: " + course2.length);
 var fullCourse = course2.concat(courses);
 console.log(fullCourse);
 console.log(fullCourse.length);
+
+//associative arrays
+var personalInfo = [];
+personalInfo["name"] = "Amirhossein";
+personalInfo["age"] = 29;
+personalInfo["location"] = "Berlin";
+
+console.log(personalInfo);
+console.log("Saved location in user's personal info object is: " + personalInfo["location"]);
+
+// the math object
+console.log("\n");
+console.log("The MATH Object");
+
+console.log(Math.PI);
+console.log(Math.E);
+console.log("The square root of 342.4 is: " + Math.sqrt(342.4).toFixed(2));
+console.log(Math.ceil(Math.random() * 10));
+
+var year = 1993;
+document.getElementById("sp1").innerHTML = Math.ceil(year / 100);
+
+// calculation using prompt & alert
+// var input = prompt("Enter a number: ");
+// var answer = Math.sqrt(input);
+
+// alert("The square root of " + input + " is : " + answer.toFixed(2));
