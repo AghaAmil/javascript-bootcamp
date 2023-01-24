@@ -119,3 +119,16 @@ function getWeekDay(year, month, day) {
 }
 
 document.getElementById("sp8").innerHTML = getWeekDay(1993, 7, 24);
+
+// store manager
+var prices = [98.99, 15.2, 20, 1026, 358.2, 747.4];
+var priceIncreament = 33;
+
+console.log(prices);
+
+for (var i = 0; i < prices.length; i++) {
+  prices[i] += priceIncreament;
+}
+
+console.log("The prices are increased by 33:");
+console.log(prices);
