@@ -32,12 +32,37 @@ console.log(id2);
 var nextSibiling = id2.nextElementSibling;
 console.log(nextSibiling);
 
-var nextSibilingFirstChild = nextSibiling.childNodes;
-console.log(nextSibilingFirstChild);
+var nextSibilingChildNodes = nextSibiling.childNodes;
+console.log(nextSibilingChildNodes);
 
 function changer2() {
-  nextSibilingFirstChild[0].innerHTML =
-    "The first child of 'Div1' next sibiling is changed by JS via DOM in three seconds";
+  nextSibilingChildNodes[1].innerHTML =
+    "The first child node of 'Div1' next element sibiling is changed by JS via DOM in three seconds";
 }
 
 setTimeout(changer2, 3000);
+
+// change the source of an image
+function imgChanger() {
+  document.getElementById("img1").src = "../image/js-sololearn-2.jpg";
+}
+
+setTimeout(imgChanger, 3000);
+
+// change the href
+function linkChanger() {
+  var link1 = document.getElementsByTagName("a");
+  link1[0].href = "https://www.apple.com";
+}
+
+// i think there would be a better way to do... i'll search that later
+function linkChangerDefault() {
+  var link2 = document.getElementsByTagName("a");
+  link2[0].href = "https://google.com";
+}
+
+// Change the color of a div
+var changeStyle = document.getElementById("div3");
+changeStyle.style.backgroundColor = "dodgerblue";
+changeStyle.style.color = "orange";
+changeStyle.style.padding = "20px";
