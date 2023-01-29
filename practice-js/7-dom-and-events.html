@@ -14,7 +14,6 @@
     <hr />
     <hr />
     <br />
-
     <h2>1. Selecting Elements</h2>
     <p>
       All HTML elements are objects. And as we know every object has properties and methods. <br />
@@ -43,7 +42,6 @@
         <p>paragraph 4 in div2</p>
       </div>
     </section>
-
     <br />
     <h2>2. Changing Elements</h2>
     <p>Once you have selected the element(s) you want to work with, you can change their attributes.</p>
@@ -61,6 +59,35 @@
     </p>
     <p>The style of HTML elements can also be changed using JavaScript.</p>
     <div id="div3">This div contains some information</div>
+    <br />
+    <h2>3. Adding & Removing Elements</h2>
+    <h3>Adding Elements</h3>
+    <p>
+      To add a new element to the HTML DOM, you must create the element (element node) first, and then
+      append it to an existing element.
+    </p>
+    <br />
+    <div id="div4">
+      This div has some contents including below paragraphs
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+    <br />
+    <div id="div5">This div is going to contain an unordred list with one item inside it.</div>
+    <br />
+    <h3>Removing Elements</h3>
+    <div id="div6">
+      This div has two paragraphs as child. And they are removed with the power of JavaScript.
+      <p id="p1">This is the 1st paragraph</p>
+      <p id="p2">This is the 2nd paragraph</p>
+    </div>
+    <br />
+    <h3>Replacing Elements</h3>
+    <div id="div7">
+      We are going to replace the paragraphes of below div to something new:
+      <p id="p3">This is the 1st paragraph</p>
+      <p id="p4">This is the 2nd paragraph</p>
+    </div>
 
     <script src="7-dom-and-events.js"></script>
     <br />

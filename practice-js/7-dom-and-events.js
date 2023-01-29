@@ -66,3 +66,50 @@ var changeStyle = document.getElementById("div3");
 changeStyle.style.backgroundColor = "dodgerblue";
 changeStyle.style.color = "orange";
 changeStyle.style.padding = "20px";
+
+// creating a new elements
+var element1 = document.createElement("p");
+var node1 = document.createTextNode("some texts are added the newly created p element");
+
+element1.appendChild(node1);
+
+var div4 = document.getElementById("div4");
+
+div4.appendChild(element1);
+
+// let's do another sample:
+// adding an unordered list to this div
+
+var element2 = document.createElement("ul");
+var element2Child = document.createElement("li");
+var node2 = document.createTextNode("This is a list.");
+
+element2Child.appendChild(node2);
+element2.appendChild(element2Child);
+
+var div5 = document.getElementById("div5");
+
+div5.appendChild(element2);
+console.log(div5);
+
+// removing paragraphs from a div
+var div6 = document.getElementById("div6");
+var div6Child1 = document.getElementById("p1");
+var div6Child2 = document.getElementById("p2");
+
+console.log(div6);
+console.log(div6Child1);
+
+div6.removeChild(div6Child1);
+div6Child2.parentNode.removeChild(div6Child2);
+
+// Replacing elements
+var element3 = document.createElement("p");
+var node3 = document.createTextNode("This text is replaced with the old one.");
+
+element3.appendChild(node3);
+
+var div7 = document.getElementById("div7");
+var p3 = document.getElementById("p3");
+
+div7.replaceChild(element3, p3);
