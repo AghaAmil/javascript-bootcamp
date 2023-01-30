@@ -113,3 +113,36 @@ var div7 = document.getElementById("div7");
 var p3 = document.getElementById("p3");
 
 div7.replaceChild(element3, p3);
+
+// creating animations
+var posHorizontal = 0;
+var posVertical = 0;
+var box = document.getElementById("box");
+
+function movingBox() {
+  posHorizontal += 1;
+  box.style.left = posHorizontal + "px";
+
+  if (posHorizontal >= 500) {
+    posHorizontal = 499;
+    posVertical += 1;
+    box.style.top = posVertical + "px";
+  }
+
+  // if (posHorizontal == 500 && posVertical == 200) {
+  //   posVertical = 199;
+  //   posHorizontal -= 1;
+  //   box.style.left = posHorizontal + "px";
+  // }
+}
+
+function start() {
+  var timer1 = setInterval(movingBox, 10);
+}
+
+// function reset() {
+//   clearInterval(timer1);
+
+//   var posHorizontal = 0;
+//   var posVertical = 0;
+// }
