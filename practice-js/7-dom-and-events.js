@@ -170,4 +170,31 @@ function changeColor() {
   but2.removeEventListener("mouseover", changeColor);
 }
 
+// image slider
+var imgContainer = [
+  "../image/js-sololearn-1.jpg",
+  "../image/js-sololearn-2.jpg",
+  "../image/js-sololearn-3.jpg",
+];
 
+var num = 0;
+
+function nextImg() {
+  var image = document.getElementById("image");
+  num++;
+
+  if (num >= imgContainer.length) {
+    num = 0;
+  }
+  image.src = imgContainer[num];
+}
+
+function prevImg() {
+  var image = document.getElementById("image");
+  num--;
+
+  if (num < 0) {
+    num = imgContainer.length - 1;
+  }
+  image.src = imgContainer[num];
+}
