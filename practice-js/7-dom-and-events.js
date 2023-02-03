@@ -198,3 +198,18 @@ function prevImg() {
   }
   image.src = imgContainer[num];
 }
+
+// form validation
+function validate() {
+  var form1 = document.getElementById("value1");
+  var form2 = document.getElementById("value2");
+
+  if (form1.value != "" && form2.value != "") {
+    if (form1.value == form2.value) {
+      return true;
+    }
+  }
+
+  alert("The values should be equal and not blank");
+  return false;
+}
