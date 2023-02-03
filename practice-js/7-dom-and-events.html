@@ -128,6 +128,24 @@
       You can also add many event handlers of the same type to one element, i.e., two "click" events.
     </p>
     <p><button id="but2">CLICK ME</button></p>
+    <br />
+    <h2>6. Event Propagation</h2>
+    <p>There are two ways of event propagation in the HTML DOM: bubbling and capturing.</p>
+    <p>
+      In <b>bubbling</b>, the innermost element's event is handled first and then the outer element's event
+      is handled. <br />
+      In <b>capturing</b>, the outermost element's event is handled first and then the inner.
+    </p>
+    <p>
+      The <b>addEventListener()</b> method allows you to specify the propagation type with the
+      <b>"useCapture"</b>
+      parameter.
+    </p>
+    <p>
+      The default value is <b>false</b>, which means the bubbling propagation is used; when the value is
+      set to <b>true</b>, the event uses the capturing propagation.
+    </p>
+    <p style="color: red"><b>Event Propagation examples will be mentioned later.</b></p>
 
     <script src="7-dom-and-events.js"></script>
     <br />
