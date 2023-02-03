@@ -139,3 +139,33 @@ function start() {
     }
   }
 }
+
+// event handler
+function alert1() {
+  alert("Hello beautiful");
+}
+
+var event1 = document.getElementById("but1");
+event1.onclick = function () {
+  alert("This is called in different way!");
+};
+
+function change() {
+  var input = document.getElementById("input1");
+  input.value = input.value.toUpperCase();
+}
+
+//event listener
+var but2 = document.getElementById("but2");
+but2.addEventListener("click", myFunc);
+but2.addEventListener("mouseover", changeColor);
+
+function myFunc() {
+  alert(Math.random().toFixed(2));
+}
+
+function changeColor() {
+  but2.style.color = "Blue";
+  but2.style.fontSize = "20px";
+  but2.removeEventListener("mouseover", changeColor);
+}

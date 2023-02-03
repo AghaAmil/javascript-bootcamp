@@ -98,6 +98,36 @@
     <div id="container">
       <div id="box"></div>
     </div>
+    <br />
+    <h2>5. Handling Events</h2>
+    <p>
+      You can write JavaScript code that executes when an event occurs, such as when a user clicks an HTML
+      element, moves the mouse, or submits a form. When an event occurs on a target element, a handler
+      function is executed. Common HTML events include:
+    </p>
+    <p><button onclick="alert1()">Calling using OnClick</button></p>
+    <p><button id="but1">Calling using Event handler</button></p>
+    <br />
+    <p>
+      The onload and onunload events are triggered when the user enters or leaves the page. These can be
+      useful when performing actions after the page is loaded.
+    </p>
+    <p>
+      The onchange event is mostly used on textboxes. The event handler gets called when the text inside
+      the textbox changes and focus is lost from the element.
+    </p>
+    <p>
+      <b>For Example:</b>
+      <input type="text" id="input1" onchange="change()" />
+    </p>
+    <br />
+    <h3>Event Listeners</h3>
+    <p>
+      The <b>addEventListener()</b> method attaches an event handler to an element without overwriting
+      existing event handlers. You can add many event handlers to one element. <br />
+      You can also add many event handlers of the same type to one element, i.e., two "click" events.
+    </p>
+    <p><button id="but2">CLICK ME</button></p>
 
     <script src="7-dom-and-events.js"></script>
     <br />
