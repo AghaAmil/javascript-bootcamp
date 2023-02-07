@@ -8,8 +8,8 @@ document.getElementById(
 ).innerHTML = `This paragraph supposed to be generated with document.write() property. But to make things beautiful and some technical problems, I've produced it using JS DOM.`;
 
 // variables
-console.log("\n");
-console.log("3. Variables");
+console.log(`\n`);
+console.log(`3. Variables`);
 
 let x = 100;
 console.log(`X = ${x}`);
