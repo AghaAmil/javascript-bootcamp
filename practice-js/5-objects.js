@@ -44,7 +44,7 @@ console.log(student2);
 
 console.log(`Student1 ID is:  ${student1.studentId}`);
 console.log(`Student1 Major is; ${student1["major"]}`);
-console.log("Student2 complete name is: " + student2.fname + " " + student2["lname"]);
+console.log(`Student2 complete name is: ${student2.fname} ${student2["lname"]}`);
 
 // Flight managment object
 function flightScheduler(flightNumber, flightStatus) {
@@ -52,8 +52,8 @@ function flightScheduler(flightNumber, flightStatus) {
   this.flightStatus = flightStatus;
 }
 
-var flight1 = new flightScheduler("NGT 929", "landed");
-document.getElementById("sp2").innerHTML = "Flight " + flight1.flightNumber + " has " + flight1.flightStatus;
+let flight1 = new flightScheduler("NGT 929", "landed");
+document.getElementById("sp2").innerHTML = `Flight ${flight1.flightNumber} has ${flight1.flightStatus}`;
 
 // methods
 console.log("\n");
@@ -74,7 +74,7 @@ function ageCal() {
   return 2022 - this.dCreated;
 }
 
-var device1 = new deviceInfo("Apple Watch", "15#001", "Wearable", 2011);
+let device1 = new deviceInfo("Apple Watch", "15#001", "Wearable", 2011);
 
 console.log(device1);
 console.log(device1.dCreated);
@@ -82,7 +82,7 @@ console.log(device1.dCreated);
 device1.changeId("15#1#001");
 
 console.log(device1);
-console.log("The new device is: " + device1.dId);
+console.log(`The new device is ${device1.dId}`);
 console.log(device1.dAge());
 
 // store manager
@@ -94,14 +94,14 @@ function storeManager(productId, price) {
   };
 }
 
-var prod1 = new storeManager("LD1493", 1700);
+let prod1 = new storeManager("LD1493", 1700);
 
-document.getElementById("sp3").innerHTML = prod1.product + " price: " + prod1["price"];
+document.getElementById("sp3").innerHTML = `${prod1.product} price: ${prod1["price"]}`;
 
-var discount = 17;
+let discount = 17;
 prod1.dicountPrice(discount);
 
-document.getElementById("sp4").innerHTML = prod1.product + " discounted price: " + prod1["price"];
+document.getElementById("sp4").innerHTML = `${prod1.product} discounted price: ${prod1["price"]}`;
 
 // contract manager
 
@@ -109,7 +109,7 @@ function contractMang(contractName, ContractNumber) {
   this.cName = contractName;
   this.cNumber = ContractNumber;
   this.print = function () {
-    console.log(this.cName + ": " + this.cNumber);
+    console.log(`${this.cName} : ${this.cNumber}`);
   };
 }
 

@@ -1,8 +1,8 @@
 // getelementsbyclassname
 
-var class1 = document.getElementsByClassName("para1");
-var interval1 = setInterval(changer, 1000);
-var i = 0;
+let class1 = document.getElementsByClassName("para1");
+let interval1 = setInterval(changer, 1000);
+let i = 0;
 
 function changer() {
   class1[i].innerHTML = "Changed by DOM getElemetsByClassName method.";
@@ -13,26 +13,26 @@ function changer() {
 }
 
 // working with dom
-var id1 = document.getElementById("div1");
+let id1 = document.getElementById("div1");
 
 function changer1() {
   //   console.log(id1.hasChildNodes);
 
-  var pInId1 = id1.childNodes;
-  for (var index = 0; index < pInId1.length; index++) {
+  let pInId1 = id1.childNodes;
+  for (let index = 0; index < pInId1.length; index++) {
     pInId1[index].innerHTML = "Changed by JS via DOM";
   }
 }
 
 setTimeout(changer1, 2000);
 
-var id2 = document.getElementById("div1");
+let id2 = document.getElementById("div1");
 console.log(id2);
 
-var nextSibiling = id2.nextElementSibling;
+let nextSibiling = id2.nextElementSibling;
 console.log(nextSibiling);
 
-var nextSibilingChildNodes = nextSibiling.childNodes;
+let nextSibilingChildNodes = nextSibiling.childNodes;
 console.log(nextSibilingChildNodes);
 
 function changer2() {
@@ -51,51 +51,51 @@ setTimeout(imgChanger, 3000);
 
 // change the href
 function linkChanger() {
-  var link1 = document.getElementsByTagName("a");
+  let link1 = document.getElementsByTagName("a");
   link1[0].href = "https://www.apple.com";
 }
 
 // i think there would be a better way to do... i'll search that later
 function linkChangerDefault() {
-  var link2 = document.getElementsByTagName("a");
+  let link2 = document.getElementsByTagName("a");
   link2[0].href = "https://google.com";
 }
 
 // Change the color of a div
-var changeStyle = document.getElementById("div3");
+let changeStyle = document.getElementById("div3");
 changeStyle.style.backgroundColor = "dodgerblue";
 changeStyle.style.color = "orange";
 changeStyle.style.padding = "20px";
 
 // creating a new elements
-var element1 = document.createElement("p");
-var node1 = document.createTextNode("some texts are added the newly created p element");
+let element1 = document.createElement("p");
+let node1 = document.createTextNode("some texts are added the newly created p element");
 
 element1.appendChild(node1);
 
-var div4 = document.getElementById("div4");
+let div4 = document.getElementById("div4");
 
 div4.appendChild(element1);
 
 // let's do another sample:
 // adding an unordered list to this div
 
-var element2 = document.createElement("ul");
-var element2Child = document.createElement("li");
-var node2 = document.createTextNode("This is a list.");
+let element2 = document.createElement("ul");
+let element2Child = document.createElement("li");
+let node2 = document.createTextNode("This is a list.");
 
 element2Child.appendChild(node2);
 element2.appendChild(element2Child);
 
-var div5 = document.getElementById("div5");
+let div5 = document.getElementById("div5");
 
 div5.appendChild(element2);
 console.log(div5);
 
 // removing paragraphs from a div
-var div6 = document.getElementById("div6");
-var div6Child1 = document.getElementById("p1");
-var div6Child2 = document.getElementById("p2");
+let div6 = document.getElementById("div6");
+let div6Child1 = document.getElementById("p1");
+let div6Child2 = document.getElementById("p2");
 
 console.log(div6);
 console.log(div6Child1);
@@ -104,23 +104,23 @@ div6.removeChild(div6Child1);
 div6Child2.parentNode.removeChild(div6Child2);
 
 // Replacing elements
-var element3 = document.createElement("p");
-var node3 = document.createTextNode("This text is replaced with the old one.");
+let element3 = document.createElement("p");
+let node3 = document.createTextNode("This text is replaced with the old one.");
 
 element3.appendChild(node3);
 
-var div7 = document.getElementById("div7");
-var p3 = document.getElementById("p3");
+let div7 = document.getElementById("div7");
+let p3 = document.getElementById("p3");
 
 div7.replaceChild(element3, p3);
 
 // creating animations
-var posHorizontal = 0;
-var posVertical = 0;
-var box = document.getElementById("box");
+let posHorizontal = 0;
+let posVertical = 0;
+let box = document.getElementById("box");
 
 function start() {
-  var timer1 = setInterval(movingBox, 10);
+  let timer1 = setInterval(movingBox, 10);
 
   function movingBox() {
     posHorizontal += 1;
@@ -145,18 +145,18 @@ function alert1() {
   alert("Hello beautiful");
 }
 
-var event1 = document.getElementById("but1");
+let event1 = document.getElementById("but1");
 event1.onclick = function () {
   alert("This is called in different way!");
 };
 
 function change() {
-  var input = document.getElementById("input1");
+  let input = document.getElementById("input1");
   input.value = input.value.toUpperCase();
 }
 
 //event listener
-var but2 = document.getElementById("but2");
+let but2 = document.getElementById("but2");
 but2.addEventListener("click", myFunc);
 but2.addEventListener("mouseover", changeColor);
 
@@ -171,16 +171,16 @@ function changeColor() {
 }
 
 // image slider
-var imgContainer = [
+let imgContainer = [
   "../image/js-sololearn-1.jpg",
   "../image/js-sololearn-2.jpg",
   "../image/js-sololearn-3.jpg",
 ];
 
-var num = 0;
+let num = 0;
 
 function nextImg() {
-  var image = document.getElementById("image");
+  let image = document.getElementById("image");
   num++;
 
   if (num >= imgContainer.length) {
@@ -190,7 +190,7 @@ function nextImg() {
 }
 
 function prevImg() {
-  var image = document.getElementById("image");
+  let image = document.getElementById("image");
   num--;
 
   if (num < 0) {
@@ -201,8 +201,8 @@ function prevImg() {
 
 // form validation
 function validate() {
-  var form1 = document.getElementById("value1");
-  var form2 = document.getElementById("value2");
+  let form1 = document.getElementById("value1");
+  let form2 = document.getElementById("value2");
 
   if (form1.value != "" && form2.value != "") {
     if (form1.value == form2.value) {
