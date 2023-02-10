@@ -148,3 +148,49 @@ arr3.forEach((element) => {
 });
 
 console.log(contianer7);
+
+// the object used in this sample is changed by ES6
+let height = 190;
+let weight = "90 KG";
+
+let athlete = {
+  height,
+  weight,
+};
+
+console.log(athlete["weight"]);
+console.log(athlete.height);
+
+// computed property names
+let prop = "name";
+let id = 7868;
+let mobile = "+989123117711";
+
+let user = {
+  [prop]: "Amir",
+  [`user_${id}`]: `${mobile}`,
+};
+
+console.log(user);
+console.log(user[`user_${id}`]);
+
+// another example
+let i = 0;
+
+const object = {
+  [`foo${i++}`]: i,
+  [`foo${i++}`]: i,
+  [`foo${i++}`]: i,
+};
+
+console.log(object);
+
+// another example
+let param = "size";
+
+const object1 = {
+  [param]: 12,
+  [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
+};
+
+console.log(object1.mobileSize);
