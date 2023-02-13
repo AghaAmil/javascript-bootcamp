@@ -149,7 +149,7 @@ arr3.forEach((element) => {
 
 console.log(contianer7);
 
-// the object used in this sample is changed by ES6
+// the object used in this sample is changed by es6
 let height = 190;
 let weight = "90 KG";
 
@@ -160,6 +160,26 @@ let athlete = {
 
 console.log(athlete["weight"]);
 console.log(athlete.height);
+
+// method definition shorthand in es6
+
+let tree = {
+  height: 100,
+  weight: 200000,
+  type: "tree-type",
+  grow() {
+    this.height += 2;
+    this.weight += 2000;
+  },
+};
+
+console.log(`Tree's height is ${tree["height"]}`);
+console.log(`Tree's weight is ${tree["weight"]}`);
+
+tree.grow();
+
+console.log(`Tree's height after growing is ${tree.height}`);
+console.log(`Tree's weight after growing is ${tree.weight}`);
 
 // computed property names
 let prop = "name";
@@ -194,3 +214,5 @@ const object1 = {
 };
 
 console.log(object1.mobileSize);
+
+// 
