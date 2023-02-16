@@ -215,4 +215,44 @@ const object1 = {
 
 console.log(object1.mobileSize);
 
-// 
+// object assign
+
+let person1 = {
+    name: 'Jack',
+    age: 18,
+    sex: 'male'
+};
+
+let student1 = {
+    name: 'Bob',
+    age: 20,
+    xp: '2 years'
+};
+
+let newStudent = Object.assign({}, person1, student1);
+console.log(newStudent);
+
+let newStudent2 = Object.assign({}, student1, person1);
+console.log(newStudent2);
+
+// avoid mutations when creating a new object
+let newPerson = Object.assign({}, person1);
+
+console.log(newPerson);
+console.log(newPerson.sex);
+console.log(person1.sex);
+
+// assigning a value to an object property
+let newPerson2 = Object.assign({}, person1, {name: 'Amir'});
+console.log(newPerson2);
+
+// example
+let basic = {
+    ex1: 'PushUps: 20 times',
+    ex2: 'Jumps: 20 times'
+};
+let advanced = {
+    ex3: 'Squats: 30 times',
+    ex4: 'Run: 2km'
+};
+
