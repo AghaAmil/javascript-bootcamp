@@ -1,20 +1,20 @@
 // the differences between let & var
 const testVar = () => {
-  var x = 1;
-  if (true) {
-    var x = 2;
-    console.log("var x inside the if statement: " + x);
-  }
-  console.log("var x ouside the if statement: " + x);
+    var x = 1;
+    if (true) {
+        var x = 2;
+        console.log("var x inside the if statement: " + x);
+    }
+    console.log("var x outside the if statement: " + x);
 };
 
 const testLet = () => {
-  let y = 1;
-  if (true) {
-    let y = 2;
+    let y = 1;
+    if (true) {
+        let y = 2;
+        console.log("let y inside the if statement: " + y);
+    }
     console.log("let y inside the if statement: " + y);
-  }
-  console.log("let y inside the if statement: " + y);
 };
 
 testVar();
@@ -25,13 +25,13 @@ console.log("\n");
 // declaring a variable using let inside a loop
 let container = "";
 for (let i = 1; i < 11; i++) {
-  container += `${i} `;
+    container += `${i} `;
 }
 console.log(container);
 
 let container2 = "";
 for (let i = 10; i > 0; i--) {
-  container2 += `${i} `;
+    container2 += `${i} `;
 }
 console.log(container2);
 
@@ -55,85 +55,85 @@ let container3 = "";
 let arr1 = [1, 2, 3, 4, 5, 6, 7];
 
 for (let i = 0; i < arr1.length; i++) {
-  container3 += `${arr1[i]} `;
+    container3 += `${arr1[i]} `;
 }
 console.log(container3);
 
 // for...in loop iteration over objects
 const obj1 = {
-  a: 1,
-  b: 2,
-  c: 3,
-  d: 4,
-  e: 5,
-  d: 6,
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    f: 6,
 };
 
 for (let property in obj1) {
-  console.log(`${property}: ${obj1[property]}`);
+    console.log(`${property}: ${obj1[property]}`);
 }
 
 const person = {
-  name: "Amir",
-  surname: "Moravveji",
-  age: 29,
-  height: 169,
+    name: "Amir",
+    surname: "Moravveji",
+    age: 29,
+    height: 169,
 };
 
 let container4 = "";
 
 for (let property in person) {
-  container4 += `${person[property]} `;
+    container4 += `${person[property]} `;
 }
 
 console.log(container4);
 
 // for...of loop iteration over iterable objects
 let arr2 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let contianer5 = "";
+let container5 = "";
 
 for (let argument of arr2) {
-  contianer5 += `${argument}, `;
+    container5 += `${argument}, `;
 }
 
-console.log(contianer5);
+console.log(container5);
 
-// iteration over charactors of an string
-let contianer6 = "";
+// iteration over characters of a string
+let container6 = "";
 
 for (let char of "Hello World!") {
-  contianer6 += char;
+    container6 += char;
 }
 
-console.log(contianer6);
+console.log(container6);
 
 // passed students example
 let scores = [68, 95, 54, 84, 77, 75, 63, 74, 69, 80, 71, 63, 56, 91, 56, 56, 70, 93, 65, 64, 35, 68, 76, 91];
 let passedStudents = 0;
 
 for (let argument of scores) {
-  if (argument >= 70) {
-    passedStudents++;
-  }
+    if (argument >= 70) {
+        passedStudents++;
+    }
 }
 
 document.getElementById("sp1").innerHTML = `${passedStudents} students are passed`;
 
 // new function method
 function add(x, y) {
-  let sum = x + y;
-  console.log(sum);
+    let sum = x + y;
+    console.log(sum);
 }
 
 add(10, 20);
 
 // the same function using es6
 const add1 = (x, y) => {
-  let sum = x + y;
-  console.log(sum);
+    let sum = x + y;
+    console.log(sum);
 };
 
-add(61, 50);
+add1(61, 50);
 
 // simple function with one argument
 const sayHi = (x) => `Say hi to another world, ${x}!`;
@@ -141,21 +141,21 @@ console.log(sayHi("Amir"));
 
 // foreach
 arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
-let contianer7 = "";
+let container7 = "";
 
 arr3.forEach((element) => {
-  contianer7 += `${element * 2} `;
+    container7 += `${element * 2} `;
 });
 
-console.log(contianer7);
+console.log(container7);
 
 // the object used in this sample is changed by es6
 let height = 190;
 let weight = "90 KG";
 
 let athlete = {
-  height,
-  weight,
+    height,
+    weight,
 };
 
 console.log(athlete["weight"]);
@@ -164,13 +164,13 @@ console.log(athlete.height);
 // method definition shorthand in es6
 
 let tree = {
-  height: 100,
-  weight: 200000,
-  type: "tree-type",
-  grow() {
-    this.height += 2;
-    this.weight += 2000;
-  },
+    height: 100,
+    weight: 200000,
+    type: "tree-type",
+    grow() {
+        this.height += 2;
+        this.weight += 2000;
+    },
 };
 
 console.log(`Tree's height is ${tree["height"]}`);
@@ -187,8 +187,8 @@ let id = 7868;
 let mobile = "+989123117711";
 
 let user = {
-  [prop]: "Amir",
-  [`user_${id}`]: `${mobile}`,
+    [prop]: "Amir",
+    [`user_${id}`]: `${mobile}`,
 };
 
 console.log(user);
@@ -198,9 +198,9 @@ console.log(user[`user_${id}`]);
 let i = 0;
 
 const object = {
-  [`foo${i++}`]: i,
-  [`foo${i++}`]: i,
-  [`foo${i++}`]: i,
+    [`foo${i++}`]: i,
+    [`foo${i++}`]: i,
+    [`foo${i++}`]: i,
 };
 
 console.log(object);
@@ -209,8 +209,8 @@ console.log(object);
 let param = "size";
 
 const object1 = {
-  [param]: 12,
-  [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
+    [param]: 12,
+    [`mobile${param.charAt(0).toUpperCase()}${param.slice(1)}`]: 4,
 };
 
 console.log(object1.mobileSize);
