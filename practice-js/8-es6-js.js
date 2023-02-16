@@ -1,3 +1,5 @@
+console.log("1. ES6 Variables & Strings");
+
 // the differences between let & var
 const testVar = () => {
     var x = 1;
@@ -21,6 +23,7 @@ testVar();
 testLet();
 
 console.log("\n");
+console.log("2. Loop & Functions in ES6");
 
 // declaring a variable using let inside a loop
 let container = "";
@@ -161,6 +164,9 @@ let athlete = {
 console.log(athlete["weight"]);
 console.log(athlete.height);
 
+console.log("\n");
+console.log("3. ES6 Objects");
+
 // method definition shorthand in es6
 
 let tree = {
@@ -256,3 +262,72 @@ let advanced = {
     ex4: 'Run: 2km'
 };
 
+console.log("\n");
+console.log("4. Array Destructuring in ES6");
+
+// array destructuring in es6
+let arr4 = ['1', '2', '3'];
+let [one, two, three] = arr4;
+
+console.log(one);
+console.log(two);
+console.log(three);
+
+// array destructuring on functions
+let func = () => {
+    return [5, 7, 6];
+};
+
+let [five, , six] = func();
+
+console.log(five);
+console.log(six);
+
+// assignment and swapping values
+let a, b, c = 4, d = 8;
+
+[a, b = 6] = [2];
+console.log(a); // 2
+console.log(b); // 6
+
+[c, d] = [d, c];
+console.log(c); // 8
+console.log(d); // 4
+
+// object destructuring
+let obj2 = {
+    h: 100,
+    s: true,
+};
+
+let {h, s} = obj2;
+
+console.log(h);
+console.log(s);
+
+// We can assign without declaration, but there are some syntax requirements
+let var1, var2;
+({var1, var2} = {var1: 'Hello ', var2: 'AghaAmil'});
+
+console.log(var1 + var2);
+
+// another sample
+let {val1, val2} = {val1: 'Learning ', val2: 'Javascript'};
+console.log(val1 + val2);
+
+let obj3 = {
+    h: 42,
+    s: 'true',
+};
+
+let {h: foo, s: bar} = obj3;
+console.log(foo);
+
+let obj4 = {
+    uuid: 42,
+    name: "Amir"
+};
+
+let {uuid = 10, age = 20} = obj4;
+console.log(uuid);
+console.log(age);
