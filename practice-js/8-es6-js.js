@@ -419,3 +419,60 @@ const mergeObj = {...obj5, ...obj6};
 console.log(cloneObj);
 console.log(mergeObj);
 
+console.log("\n");
+console.log("6. Classes in ES6\n");
+
+// define a class
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    get area() {
+        return this.calArea();
+    }
+    calArea() {
+        return this.height * this.width;
+    }
+    // In the code above, area is a getter, calArea is a method
+}
+
+const square = new Rectangle(5, 5);
+const poster = new Rectangle(10, 6);
+
+console.log(square);
+console.log(poster);
+console.log(`The area of the square is: ${square.area}`);
+
+// another class example
+const User = class {
+    constructor(name) {
+        this.name = name;
+    }
+    sayHi() {
+        alert(`Hi ${this.name}, this alert is inside a class`);
+    }
+}
+
+let user1 = new User ('Amir');
+console.log(user1);
+
+// static method
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    static distance (a, b) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        return Math.hypot(dx, dy);
+    }
+}
+
+const p1 = new Point(10, 3);
+const p2 = new Point(2, 6);
+
+console.log(p1);
+console.log(p2);
+console.log(`Distance between these two points is: ${Point.distance(p1, p2).toFixed(2)}`);
