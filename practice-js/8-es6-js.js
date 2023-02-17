@@ -331,3 +331,91 @@ let obj4 = {
 let {uuid = 10, age = 20} = obj4;
 console.log(uuid);
 console.log(age);
+
+console.log("\n");
+console.log("5. Rest & Spread");
+
+// old function prior to es6
+function checkArrContent(arr) {
+    for (let i = 1; i < arguments.length; i++) {
+        let num = arguments[i];
+        // console.log(arr);
+        // console.log(num);
+        if (arr.indexOf(num) === -1) {
+            return false;
+        }
+    }
+    return true;
+}
+
+let array = [2, 4, 6, 7];
+
+console.log(checkArrContent(array, 6, 6, 9));
+console.log(checkArrContent(array, 2, 4, 7, 6));
+console.log(checkArrContent(array, 2));
+
+// using above function with es6 standards
+const containsAll = (arr, ...nums) => {
+    for (let i of nums) {
+        if (arr.indexOf(i) === -1) {
+            return false;
+        }
+    }
+    return true;
+}
+
+let array1 = [5, 1, 98, 3];
+
+console.log("Using new method in es6:");
+console.log(containsAll(array1, 4, 5, 1, 5, 3));
+console.log(containsAll(array1, 5, 3, 98));
+
+// calculate numbers inside the array
+const arrCalculator = (...input) => {
+    let sum = 0;
+    for (let arg of input) {
+        sum += arg;
+    }
+    return sum;
+}
+
+console.log('[1, 3, 4, 5, 1, 4, 5, 76, 4]');
+console.log(`The sum of above input is: ${arrCalculator(1, 3, 4, 5, 1, 4, 5, 76, 4)}`);
+
+// spread in function calls
+const func1 = (w, x, y, z) => {
+    console.log(w + x + y + z);
+}
+
+let array2 = [1, 2, 3];
+func1(...array2, 4);
+
+// spread in array literals
+let array3 = ["one", "two", "Five"];
+array3.splice(2, 0, "Three");
+array3.splice(3, 0, "Four");
+
+console.log(array3);
+
+// new method in es6
+let array4 = ['Four', 'Five'];
+let newArray = ['One', 'Two', 'Three', ...array4];
+
+console.log(newArray);
+
+// spread in object literals
+const obj5 = {
+    name: 'Amirhossein',
+    age: 29
+};
+const obj6 = {
+    name: 'Ali',
+    year: 1992
+};
+
+const cloneObj = {...obj5};
+const mergeObj = {...obj5, ...obj6};
+
+console.log(cloneObj);
+console.log(mergeObj);
+
