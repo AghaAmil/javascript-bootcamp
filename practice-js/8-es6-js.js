@@ -428,12 +428,15 @@ class Rectangle {
         this.height = height;
         this.width = width;
     }
+
     get area() {
         return this.calArea();
     }
+
     calArea() {
         return this.height * this.width;
     }
+
     // In the code above, area is a getter, calArea is a method
 }
 
@@ -449,12 +452,13 @@ const User = class {
     constructor(name) {
         this.name = name;
     }
+
     sayHi() {
         alert(`Hi ${this.name}, this alert is inside a class`);
     }
 }
 
-let user1 = new User ('Amir');
+let user1 = new User('Amir');
 console.log(user1);
 
 // static method
@@ -463,7 +467,8 @@ class Point {
         this.x = x;
         this.y = y;
     }
-    static distance (a, b) {
+
+    static distance(a, b) {
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         return Math.hypot(dx, dy);
@@ -476,3 +481,75 @@ const p2 = new Point(2, 6);
 console.log(p1);
 console.log(p2);
 console.log(`Distance between these two points is: ${Point.distance(p1, p2).toFixed(2)}`);
+
+// The exam average calculator
+class ExamResult {
+    static average(exam1, exam2, exam3) {
+        const avg = (exam1 + exam2 + exam3) / 3;
+        return Math.round(avg);
+    }
+}
+
+let student2 = ExamResult.average(74, 80, 68);
+document.getElementById('sp2').innerHTML = `The average of the student's exam is ${student2}`;
+
+// inheritance in es6
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     speak() {
+//         console.log(`${this.name} is making some noises.`);
+//     }
+// }
+// class Dog extends Animal {
+//     speak() {
+//         console.log(`${this.name} is barking.`)
+//     }
+// }
+//
+// let animal1 = new Dog('Rex');
+// animal1.speak();
+//
+// let animal2 = new Animal('Jessie');
+// animal2.speak();
+
+// ano
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} is making some noises.`);
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        super.speak();
+        console.log(`${this.name} is barking.`);
+    }
+}
+
+let animal3 = new Dog('Max');
+animal3.speak();
+
+console.log("\n");
+console.log("7. ES6 Map & Set\n");
+
+// map
+let map = new Map();
+map.set('k1', 'v1').set('k2', 'v2');
+
+console.log(map);
+console.log(map.get('k1'));
+console.log(map.has('k2'));
+
+for (let kv of map.entries()) {
+    console.log(`${kv[0]} : ${kv[1]}`);
+}
+
+// example es6 map
+
+
