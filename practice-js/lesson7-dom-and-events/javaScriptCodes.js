@@ -5,23 +5,23 @@ let interval1 = setInterval(changer, 1000);
 let i = 0;
 
 function changer() {
-  class1[i].innerHTML = "Changed by DOM getElemetsByClassName method.";
-  i++;
+    class1[i].innerHTML = "Changed by DOM getElementsByClassName method.";
+    i++;
 
-  //   console.log(i);
-  if (i >= class1.length) clearInterval(interval1);
+    //   console.log(i);
+    if (i >= class1.length) clearInterval(interval1);
 }
 
 // working with dom
 let id1 = document.getElementById("div1");
 
 function changer1() {
-  //   console.log(id1.hasChildNodes);
+    //   console.log(id1.hasChildNodes);
 
-  let pInId1 = id1.childNodes;
-  for (let index = 0; index < pInId1.length; index++) {
-    pInId1[index].innerHTML = "Changed by JS via DOM";
-  }
+    let pInId1 = id1.childNodes;
+    for (let index = 0; index < pInId1.length; index++) {
+        pInId1[index].innerHTML = "Changed by JS via DOM";
+    }
 }
 
 setTimeout(changer1, 2000);
@@ -29,36 +29,36 @@ setTimeout(changer1, 2000);
 let id2 = document.getElementById("div1");
 console.log(id2);
 
-let nextSibiling = id2.nextElementSibling;
-console.log(nextSibiling);
+let nextSibling = id2.nextElementSibling;
+console.log(nextSibling);
 
-let nextSibilingChildNodes = nextSibiling.childNodes;
-console.log(nextSibilingChildNodes);
+let nextSiblingChildNodes = nextSibling.childNodes;
+console.log(nextSiblingChildNodes);
 
 function changer2() {
-  nextSibilingChildNodes[1].innerHTML =
-    "The first child node of 'Div1' next element sibiling is changed by JS via DOM in three seconds";
+    nextSibilingChildNodes[1].innerHTML =
+        "The first child node of 'Div1' next element sibling is changed by JS via DOM in three seconds";
 }
 
 setTimeout(changer2, 3000);
 
 // change the source of an image
 function imgChanger() {
-  document.getElementById("img1").src = "../image/js-sololearn-2.jpg";
+    document.getElementById("img1").src = "../image/js-sololearn-2.jpg";
 }
 
 setTimeout(imgChanger, 3000);
 
 // change the href
 function linkChanger() {
-  let link1 = document.getElementsByTagName("a");
-  link1[0].href = "https://www.apple.com";
+    let link1 = document.getElementsByTagName("a");
+    link1[0].href = "https://www.apple.com";
 }
 
 // i think there would be a better way to do... i'll search that later
 function linkChangerDefault() {
-  let link2 = document.getElementsByTagName("a");
-  link2[0].href = "https://google.com";
+    let link2 = document.getElementsByTagName("a");
+    link2[0].href = "https://google.com";
 }
 
 // Change the color of a div
@@ -120,39 +120,39 @@ let posVertical = 0;
 let box = document.getElementById("box");
 
 function start() {
-  let timer1 = setInterval(movingBox, 10);
+    let timer1 = setInterval(movingBox, 10);
 
-  function movingBox() {
-    posHorizontal += 1;
-    box.style.left = posHorizontal + "px";
+    function movingBox() {
+        posHorizontal += 1;
+        box.style.left = posHorizontal + "px";
 
-    if (posHorizontal >= 500) {
-      posHorizontal = 499;
-      posVertical += 1;
-      box.style.top = posVertical + "px";
+        if (posHorizontal >= 500) {
+            posHorizontal = 499;
+            posVertical += 1;
+            box.style.top = posVertical + "px";
+        }
+
+        console.log(timer1);
+
+        if (posVertical === 200) {
+            clearInterval(timer1);
+        }
     }
-
-    console.log(timer1);
-
-    if (posVertical == 200) {
-      clearInterval(timer1);
-    }
-  }
 }
 
 // event handler
 function alert1() {
-  alert("Hello beautiful");
+    alert("Hello beautiful");
 }
 
 let event1 = document.getElementById("but1");
 event1.onclick = function () {
-  alert("This is called in different way!");
+    alert("This is called in different way!");
 };
 
 function change() {
-  let input = document.getElementById("input1");
-  input.value = input.value.toUpperCase();
+    let input = document.getElementById("input1");
+    input.value = input.value.toUpperCase();
 }
 
 //event listener
@@ -161,55 +161,55 @@ but2.addEventListener("click", myFunc);
 but2.addEventListener("mouseover", changeColor);
 
 function myFunc() {
-  alert(Math.random().toFixed(2));
+    alert(Math.random().toFixed(2));
 }
 
 function changeColor() {
-  but2.style.color = "Blue";
-  but2.style.fontSize = "20px";
-  but2.removeEventListener("mouseover", changeColor);
+    but2.style.color = "Blue";
+    but2.style.fontSize = "20px";
+    but2.removeEventListener("mouseover", changeColor);
 }
 
 // image slider
 let imgContainer = [
-  "../image/js-sololearn-1.jpg",
-  "../image/js-sololearn-2.jpg",
-  "../image/js-sololearn-3.jpg",
+    "../image/js-sololearn-1.jpg",
+    "../image/js-sololearn-2.jpg",
+    "../image/js-sololearn-3.jpg",
 ];
 
 let num = 0;
 
 function nextImg() {
-  let image = document.getElementById("image");
-  num++;
+    let image = document.getElementById("image");
+    num++;
 
-  if (num >= imgContainer.length) {
-    num = 0;
-  }
-  image.src = imgContainer[num];
+    if (num >= imgContainer.length) {
+        num = 0;
+    }
+    image.src = imgContainer[num];
 }
 
 function prevImg() {
-  let image = document.getElementById("image");
-  num--;
+    let image = document.getElementById("image");
+    num--;
 
-  if (num < 0) {
-    num = imgContainer.length - 1;
-  }
-  image.src = imgContainer[num];
+    if (num < 0) {
+        num = imgContainer.length - 1;
+    }
+    image.src = imgContainer[num];
 }
 
 // form validation
 function validate() {
-  let form1 = document.getElementById("value1");
-  let form2 = document.getElementById("value2");
+    let form1 = document.getElementById("value1");
+    let form2 = document.getElementById("value2");
 
-  if (form1.value != "" && form2.value != "") {
-    if (form1.value == form2.value) {
-      return true;
+    if (form1.value !== "" && form2.value !== "") {
+        if (form1.value === form2.value) {
+            return true;
+        }
     }
-  }
 
-  alert("The values should be equal and not blank");
-  return false;
+    alert("The values should be equal and not blank");
+    return false;
 }
