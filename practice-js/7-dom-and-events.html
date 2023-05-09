@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Learning JS by Sololearn</title>
+  </head>
+
+  <body>
+    <h1>Learning JS by Sololearn</h1>
+    <hr />
+    <hr />
+    <br />
+    <h2>1. Selecting Elements</h2>
+    <p>
+      All HTML elements are objects. And as we know every object has properties and methods. <br />
+      The document object has methods that allow you to select the desired HTML element. <br />
+      These three methods are the most commonly used for selecting HTML elements:
+    </p>
+    <div>
+      <p class="para1">The content of these paragraphs are modified by JS.</p>
+      <p class="para1">The content of these paragraphs are modified by JS.</p>
+      <p class="para1">The content of these paragraphs are modified by JS.</p>
+      <p class="para1">The content of these paragraphs are modified by JS.</p>
+      <p class="para1">The content of these paragraphs are modified by JS.</p>
+    </div>
+    <p>
+      Each element in the DOM has a set of properties and methods that provide information about their
+      relationships in the DOM:
+    </p>
+    <p>A section with some divs and paragraphs is created below, We want to play with it using JS DOM.</p>
+    <section>
+      <div id="div1">
+        <p>Going to be changed by JS in 2 seconds. if you miss it, refresh the page.</p>
+        <p>Going to be changed by JS in 2 seconds. if you miss it, refresh the page.</p>
+      </div>
+      <div class="div2">
+        <p>paragraph 3 in div2</p>
+        <p>paragraph 4 in div2</p>
+      </div>
+    </section>
+    <br />
+    <h2>2. Changing Elements</h2>
+    <p>Once you have selected the element(s) you want to work with, you can change their attributes.</p>
+    <p>
+      For example, we can change the src attribute of an image: (the source of the image will be changed in
+      3 seconds)
+    </p>
+    <img src="../image/js-sololearn-1.jpg" alt="image1" id="img1" />
+    <br />
+    <p>We can change the href attribute of a link:</p>
+    <p><a href="https://google.com">This link directs you to Google by default.</a></p>
+    <p>
+      <button onclick="linkChanger()">Change the href</button>
+      <button onclick="linkChangerDefault()">Reset to default link</button>
+    </p>
+    <p>The style of HTML elements can also be changed using JavaScript.</p>
+    <div id="div3">This div contains some information</div>
+    <br />
+    <h2>3. Adding & Removing Elements</h2>
+    <h3>Adding Elements</h3>
+    <p>
+      To add a new element to the HTML DOM, you must create the element (element node) first, and then
+      append it to an existing element.
+    </p>
+    <br />
+    <div id="div4">
+      This div has some contents including below paragraphs
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+    <br />
+    <div id="div5">This div is going to contain an unordred list with one item inside it.</div>
+    <br />
+    <h3>Removing Elements</h3>
+    <div id="div6">
+      This div has two paragraphs as child. And they are removed with the power of JavaScript.
+      <p id="p1">This is the 1st paragraph</p>
+      <p id="p2">This is the 2nd paragraph</p>
+    </div>
+    <br />
+    <h3>Replacing Elements</h3>
+    <div id="div7">
+      We are going to replace the paragraphes of below div to something new:
+      <p id="p3">This is the 1st paragraph</p>
+      <p id="p4">This is the 2nd paragraph</p>
+    </div>
+    <br />
+    <h2>4. Creating Animations</h2>
+    <p>Let's create a simple HTML page with a box element that will be animated using JS.</p>
+    <p>
+      <button onclick="start()">Start</button>
+      <!-- <button onclick="reset()">Reset</button> -->
+    </p>
+    <div id="container">
+      <div id="box"></div>
+    </div>
+    <br />
+    <h2>5. Handling Events</h2>
+    <p>
+      You can write JavaScript code that executes when an event occurs, such as when a user clicks an HTML
+      element, moves the mouse, or submits a form. When an event occurs on a target element, a handler
+      function is executed. Common HTML events include:
+    </p>
+    <p><button onclick="alert1()">Calling using OnClick</button></p>
+    <p><button id="but1">Calling using Event handler</button></p>
+    <br />
+    <p>
+      The onload and onunload events are triggered when the user enters or leaves the page. These can be
+      useful when performing actions after the page is loaded.
+    </p>
+    <p>
+      The onchange event is mostly used on textboxes. The event handler gets called when the text inside
+      the textbox changes and focus is lost from the element.
+    </p>
+    <p>
+      <b>For Example:</b>
+      <input type="text" id="input1" onchange="change()" />
+    </p>
+    <br />
+    <h3>Event Listeners</h3>
+    <p>
+      The <b>addEventListener()</b> method attaches an event handler to an element without overwriting
+      existing event handlers. You can add many event handlers to one element. <br />
+      You can also add many event handlers of the same type to one element, i.e., two "click" events.
+    </p>
+    <p><button id="but2">CLICK ME</button></p>
+    <br />
+    <h2>6. Event Propagation</h2>
+    <p>There are two ways of event propagation in the HTML DOM: bubbling and capturing.</p>
+    <p>
+      In <b>bubbling</b>, the innermost element's event is handled first and then the outer element's event
+      is handled. <br />
+      In <b>capturing</b>, the outermost element's event is handled first and then the inner.
+    </p>
+    <p>
+      The <b>addEventListener()</b> method allows you to specify the propagation type with the
+      <b>"useCapture"</b>
+      parameter.
+    </p>
+    <p>
+      The default value is <b>false</b>, which means the bubbling propagation is used; when the value is
+      set to <b>true</b>, the event uses the capturing propagation.
+    </p>
+    <p style="color: red"><b>Event Propagation examples will be mentioned later.</b></p>
+    <br />
+    <h2>7. Creating an Image Slider.</h2>
+    <div>
+      <button onclick="prevImg()">Prev Img</button>
+      <img src="../image/js-sololearn-1.jpg" alt=pic1" id="image" width="300px" height="150px" >
+      <button onclick="nextImg()">Next Img</button>
+    </div>
+    <br />
+    <h2>8. Form Validation</h2>
+    <p>
+      For example, let's create a form with two inputs and one button. The text in both fields should be
+      the same and not blank to pass the validation.
+    </p>
+    <form onsubmit="return validate()" method="post">
+      Number: <input type="text" name="num1" id="value1" /> Repeat:
+      <input type="text" name="num2" id="value2" />
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="7-dom-and-events.js"></script>
+    <br />
+  </body>
+</html>
