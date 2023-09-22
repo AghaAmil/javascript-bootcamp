@@ -12,6 +12,20 @@ body {
     padding: 0;
 }
 
+h1  {
+    color: #2196F3;
+    font-size: 2.8em;
+}
+
+h2 {
+    color: #FF9800;
+    font-size: 2em;
+}
+
+.course-title {
+    text-align: left;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -167,13 +181,43 @@ textarea {
 }
 
 header {
-    background-color: #2f2f2f;
-    color: dodgerblue;
-    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 1.2em;
 }
 
-.courseTitle {
-    text-align: left;
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+.logo {
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
