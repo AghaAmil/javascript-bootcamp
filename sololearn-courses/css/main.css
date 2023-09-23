@@ -10,9 +10,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h1  {
+h1 {
     color: #2196F3;
     font-size: 2.8em;
 }
@@ -181,7 +184,7 @@ textarea {
 }
 
 header {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
     padding: 10px 30px;
     display: flex;
@@ -193,31 +196,80 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .logo {
     width: 80px; /* Adjust the width as needed */
     height: 80px; /* Adjust the height as needed */
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
-footer {
-    background-color: #333;
+main {
+    background-color: #777;
     color: #fff;
-    padding: 10px;
+
+}
+
+/* Style for the footer */
+footer {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
     text-align: center;
+    margin-top: auto;
+}
+
+/* Style for social media icons */
+footer a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #fff;
+}
+
+footer a i {
+    font-size: 1.8em;
+    transition: color 0.3s;
+}
+
+/* Change icon color on hover for each social media */
+footer a i:hover.fab.fa-github {
+    color: #171515; /* GitHub's color */
+}
+
+footer a i:hover.fab.fa-linkedin {
+    color: #0072b1; /* LinkedIn's color */
+}
+
+footer a i:hover.fab.fa-twitter {
+    color: #26a7de; /* Twitter's color */
+}
+
+/* Container for name and icons */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Margin between name and icons */
+.footer-content p {
+    margin-right: 20px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .header-content > h1 {
+        margin: 0;
     }
 
     .logo {
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
 
