@@ -3,8 +3,8 @@
    ========================================================================== */
 
 html {
-    font-family: -apple-system-body, BlinkMacSystemFont, sans-serif;
-    line-height: 1.4;
+    font-family: 'Chivo', sans-serif;
+    line-height: 1.5;
 }
 
 body {
@@ -15,8 +15,15 @@ body {
     flex-direction: column;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Bree Serif', serif;
+}
+
 h1 {
-    color: #2196F3;
+    /*color: #2196F3;*/
+    color: #139EF2;
     font-size: 2.8em;
 }
 
@@ -25,10 +32,12 @@ h2 {
     font-size: 2em;
 }
 
-.course-title {
-    text-align: left;
+h3 {
+    color: #ffa938;
+    font-size: 1.5em;
+    /*margin: 0;*/
+    margin-bottom: 0;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -184,13 +193,18 @@ textarea {
 }
 
 header {
-    background-color: #444;
+    background-color: #212121;
     color: #fff;
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+header > p {
+    padding: 0 15px;
+    text-align: left;
 }
 
 .header-content {
@@ -204,15 +218,31 @@ header {
     margin-right: 5px;
 }
 
+/* Style for the main section of the website */
 main {
-    background-color: #777;
+    background-color: #444;
     color: #fff;
+    text-align: left;
 
+}
+
+main > .main-title {
+    background-color: #777;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+main > .main-content {
+    padding: 0 10px;
+}
+
+main > section > p {
+    margin-top: 0;
 }
 
 /* Style for the footer */
 footer {
-    background-color: #444;
+    background-color: #212121;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -258,6 +288,10 @@ footer a i:hover.fab.fa-twitter {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    header > p {
+        text-align: center;
+    }
+
     .header-content {
         flex-direction: column;
         margin-bottom: 20px;
