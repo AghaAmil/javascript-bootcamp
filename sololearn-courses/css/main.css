@@ -25,17 +25,17 @@ h3 {
 
 h1 {
     /*color: #2196F3;*/
-    color: #139EF2;
+    color: #0098EA;
     font-size: 2.8em;
 }
 
 h2 {
-    color: #FF9800;
+    color: #d0670b;
     font-size: 2em;
 }
 
 h3 {
-    color: #ffa938;
+    color: #FF9800;
     font-size: 1.5em;
     /*margin: 0;*/
     margin-bottom: 0;
@@ -195,7 +195,7 @@ textarea {
 }
 
 header {
-    background-color: #212121;
+    background-color: #232329;
     color: #fff;
     padding: 10px 30px;
     display: flex;
@@ -222,14 +222,14 @@ header > p {
 
 /* Style for the main section of the website */
 main {
-    background-color: #444;
+    background-color: #2D2D32;
     color: #fff;
     text-align: left;
 
 }
 
 main > .main-title {
-    background-color: #777;
+    background-color: #F7F9FB;
     padding: 5px 10px;
     text-align: center;
 }
@@ -247,6 +247,7 @@ main > section > p {
     display: flex;
     align-items: center;
     padding:  0 16px;
+    margin: 10px 0;
 }
 
 .bq-logo {
@@ -262,7 +263,7 @@ main > section > p {
 
 /* Style for the footer */
 footer {
-    background-color: #212121;
+    background-color: #232329;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -285,7 +286,7 @@ footer a i {
 /* Change icon color on hover for each social media */
 
 footer a i:hover.fab.fa-github {
-    color: #171515; /* GitHub's color */
+    color: #8c8c8c; /* GitHub's color */
 }
 
 footer a i:hover.fab.fa-linkedin {
