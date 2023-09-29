@@ -26,12 +26,12 @@ h3 {
 h1 {
     /*color: #2196F3;*/
     color: #0098EA;
-    font-size: 2.8em;
+    font-size: 3em;
 }
 
 h2 {
-    color: #d0670b;
-    font-size: 2em;
+    color: #0098EA;
+    font-size: 2.4em;
 }
 
 h3 {
@@ -39,6 +39,12 @@ h3 {
     font-size: 1.5em;
     /*margin: 0;*/
     margin-bottom: 0;
+}
+
+span {
+    padding: 1px;
+    background-color: #494949;
+    color: #EB5757;
 }
 
 /*
@@ -246,7 +252,7 @@ main > section > p {
 .blockquote-content {
     display: flex;
     align-items: center;
-    padding:  0 16px;
+    padding: 0 16px;
     margin: 10px 0;
 }
 
