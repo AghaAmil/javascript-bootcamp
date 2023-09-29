@@ -13,12 +13,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    letter-spacing: .75px;
 }
 
 h1,
 h2,
 h3 {
     font-family: 'Bree Serif', serif;
+    letter-spacing: 0.72px;
 }
 
 h1 {
@@ -213,8 +215,8 @@ header > p {
 }
 
 .logo {
-    width: 80px; /* Adjust the width as needed */
-    height: 80px; /* Adjust the height as needed */
+    width: 100px;
+    height: 100px;
     margin-right: 5px;
 }
 
@@ -240,6 +242,24 @@ main > section > p {
     margin-top: 0;
 }
 
+/* style for the blockquote */
+.blockquote-content {
+    display: flex;
+    align-items: center;
+    padding:  0 16px;
+}
+
+.bq-logo {
+    max-width: 45px;
+    max-height: 58px;
+}
+
+.blockquote-content > blockquote {
+    text-align: left;
+    margin-left: 20px;
+}
+
+
 /* Style for the footer */
 footer {
     background-color: #212121;
@@ -250,6 +270,7 @@ footer {
 }
 
 /* Style for social media icons */
+
 footer a {
     text-decoration: none;
     margin: 0 10px;
@@ -262,6 +283,7 @@ footer a i {
 }
 
 /* Change icon color on hover for each social media */
+
 footer a i:hover.fab.fa-github {
     color: #171515; /* GitHub's color */
 }
@@ -275,6 +297,7 @@ footer a i:hover.fab.fa-twitter {
 }
 
 /* Container for name and icons */
+
 .footer-content {
     display: flex;
     justify-content: center;
@@ -282,6 +305,7 @@ footer a i:hover.fab.fa-twitter {
 }
 
 /* Margin between name and icons */
+
 .footer-content p {
     margin-right: 20px;
 }
