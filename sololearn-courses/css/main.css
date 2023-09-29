@@ -235,7 +235,7 @@ main {
 }
 
 main > .main-title {
-    background-color: #F7F9FB;
+    background-color: #F2EFE7;
     padding: 5px 10px;
     text-align: center;
 }
@@ -266,6 +266,15 @@ main > section > p {
     margin-left: 20px;
 }
 
+/* Style for the Exercise content  */
+.exec-content {
+    background-color: #F2EFE7;
+    padding: 20px 10px;
+}
+
+.exec-content > p {
+    color: black;
+}
 
 /* Style for the footer */
 footer {
